@@ -192,12 +192,40 @@
             <p></p> <!-- Por si quiero agregar firma en el Footer -->
         </div>
     </footer>
-    
+
    <!-- FAB - Floating Action Button -->
    <button id="FAB" type="button" class="FAB btn btn-light animation-settings" data-toggle="modal" data-target="#my-modal" data-whatever="Bodaishin">
         <i class="far fa-envelope fa-2x  animation-settings"></i>
     </button>
 
+    <!-- Modal -->
+    <div class="modal-background modal-container" tabindex="-1" role="dialog" aria-hidden="true">
+        <div id="my-modal" class="modal" role="document">
+            <div class="modal__content modal-content">
+                <div class="modal__header modal-header">
+                    <h5 class="modal__tittle modal-title">Contact me</h5>
+                    <button type="button" class="modal__close-button close" data-dismiss="modal" aria-label="Close">
+                        <span class="modal__span" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal__body modal-body">
+                    <form class="contact-form">
+                        <div class="contact-form__section form-group">
+                            <label class="contact-form__label" for="recipient-name">Recipient:</label>
+                            <input type="text" class="contact-form__input form-control" id="recipient-name">
+                        </div>
+                        <div class="contact-form__section form-group">
+                            <label for="message-text" class="contact-form__label col-form-label">Message:</label>
+                            <textarea class="contact-form__textarea form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal__footer modal-footer">
+                    <button type="button" class="modal__button-submit btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>
