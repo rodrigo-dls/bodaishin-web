@@ -4,3 +4,488 @@
 @use '3-layout/3-layout';
 @use '4-modules/4-modules';
 @use '5-templates/5-templates';
+
+@use 'animation';
+
+/* Order of properties
+    1. Display
+    2. Position
+    3. Size/Shape
+    4. Design
+         I. Box-design
+        II. Font-design
+    5. Child's Layout
+    6. Animation
+ */
+
+//  Variables
+$font-primary: 'Archivo', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+$background-color-primary: white; 
+// Breakpoints
+$breakpoint-desktop: 1200px;
+$breakpoint-laptop: 950px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 400px;
+
+/****** General Custom ******/
+* {
+    margin: 0px;
+    color: $background-color-primary;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-primary;
+    font-weight: 500;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+li {
+    list-style: none;
+}
+.my-container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.my-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section {
+    background-color: #000000bd;
+}
+
+/****** Main Container ******/
+body {
+    min-width: 320px;
+    margin-top: 20px;
+    font-family: $font-secondary;
+    font-weight: 300;
+}
+
+/****** Navbar ******/
+.nav-container {
+    position: fixed;
+    top: 0;
+    z-index: 7;
+    width: 100%;
+    min-height: 70px;
+}
+nav {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+}
+nav ul {
+    display: flex;
+    height: 1em;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-around;
+}
+nav ul li {
+    display: flex;
+    width: 100%;
+    border-right: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+nav ul li:last-child {
+    border-right: 0;
+}
+nav ul li a {
+    width: 100%;
+    padding: 1rem 1rem;
+    color: #ffffff;
+    line-height: 100%;
+}
+nav ul li a:hover {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/****** Home ******/
+#home {
+    height: 90vh;
+    background-color: black;
+    justify-content: center;
+}
+#home .bckgr-hm-img {
+    /* display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center; */
+
+    /* background-image: url('../images/background-img-01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; */
+}
+.home-content {
+    transform: translateY(20%);
+    height: inherit;
+}
+#title-home {
+    position: absolute;
+    width: 100%;
+}
+
+    /****** Boton de Scroll ******/
+#scrollButton a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    padding-top: 60px;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+#scrollButton a:hover {
+    opacity: .5;
+}
+#scrollButton a span {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+#scrollButton a span::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin: -12px 0 0 -8px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+#scrollButton a span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+    border-radius: 100%;
+    opacity: 0;
+    -webkit-animation: sdb03 3.5s ;
+    animation: sdb03 3.5s infinite;
+    box-sizing: border-box;
+}
+
+/****** Bio ******/
+#bio {
+
+}
+
+#bio div.my-row {
+    margin-bottom: 15px;
+    background-image: url("../images/background-img-02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    background-position: center center;
+    justify-content: space-evenly;
+}
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 96%;
+    padding: 10px 55px;
+    background-color: #0000005e;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+    line-height: 30px;
+    text-align: center;
+}
+.bio-container hr {
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-top: 1px solid rgb(255, 255, 255); 
+}
+
+/****** Section General Custom ******/
+.section-title-container {
+    flex-direction: column;
+    padding-top: 20px;
+}
+.section-title {
+    margin-bottom: 0px;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 8px;
+}
+.section-title-container hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0px;
+    border-top: 1px solid rgb(255, 255, 255);   
+}
+
+/****** Releases ******/
+#releases {
+    padding-top: 10px;
+    background-color: #4a4a4a;
+}
+#releases .section-body {
+    padding: 0px 20px;
+    justify-content: center;
+}
+.item-container {
+    margin: 15px 0px;
+}
+.item-header {
+    display: flex;
+    padding: 0px 20px;
+}
+.header-content {
+    flex-basis: 100%;
+}
+.header-content h3 {
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+#releases .item-header .header-img  {
+    margin: 10px;
+    margin-left: 0px !important;
+    border-radius: 3px;
+    flex-basis: 100%;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.img-container-01 {
+    background-image: url("../images/release-cover-three-of-a-kind.jpeg");
+    /* background-color: #424242; */
+}
+.img-container-02 {
+    background-image: url("../images/release-cover-downtempo-grooves.jpeg");
+    /* background-color: #424242; */
+}
+.music-player-container {
+    display: flex;
+    width: 400px;
+    margin: 5px auto;
+    border-radius: 26px;
+    box-shadow: black 0px 0px 10px 0px;
+    background-color: black;
+}
+.music-player-container audio {
+    width: 100%;
+}
+
+/****** Circle Of Life ******/
+#podcast {
+    padding-top: 10px;
+    background-color: #353535;
+}
+.podcast-container {
+    flex-direction: column;
+    max-height: 94%;
+    align-content: center;
+    justify-content: space-evenly;
+}
+.podcast-container h2 {
+    font-size: 1.3rem;
+}
+
+/****** Labels ******/
+#labels {
+    margin-bottom: 59px; /* to float over the bottom bar */
+    padding-bottom: 40px;
+    border-bottom: 1px solid white;
+    background-color: #2b2b2b;
+}
+.label-container {
+    padding: 0px 20px;
+    justify-content: space-evenly;
+}
+.label-container div {
+    height: 100px;
+    width: 100px;
+    margin: 15px 0px;
+    border-radius: 5%;
+    box-shadow: black 0px 0px 5px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    background-position: center center;
+}
+.label-container div:hover {
+    opacity: 0.8;
+}
+.label-bckgr-img-avenue {
+    background-image: url("../images/logo-3rd-avenue-02.jpg");
+}
+.label-bckgr-img-purr {
+    background-image: url("../images/logo-the-purr-01.png");
+}
+.label-bckgr-img-flug-lab {
+    background-image: url("../images/logo-flug-lab-01.png");
+    background-size: contain !important;
+}
+
+/****** Footer ******/
+footer {
+    position: fixed;
+    top: 730px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 8;
+    background-color: #151515;
+    /* transition: top 1s; */
+}
+footer ul {
+    display: flex;
+    height: 60px;
+    /* width: 100%; */
+    padding: 0;
+    align-items: center;
+    list-style-type: none;
+    justify-content: left;
+}
+footer ul li {
+    height: fit-content;
+    margin: 0px 1em;
+}
+footer ul li a {
+    display: contents;
+}
+footer i {
+    font-size: 1.5em!important;
+    padding: 0px 0px 12px;
+}
+.fa-instagram,
+.fa-soundcloud,
+.fa-headphones,
+.fa-facebook {
+    transition: all 0.25s;
+}
+.fa-instagram:hover {
+    color: #c33ca1;
+    transform: translateY(-10px);
+}
+.fa-soundcloud:hover {
+    color: #ff6700;
+    transform: translateY(-10px);
+}
+.fa-headphones:hover {
+    color: #94d53b;
+    transform: translateY(-10px);
+}
+.fa-facebook:hover {
+    color: #2878b5;
+    transform: translateY(-10px);
+}
+
+/****** FAB - Floating Actin Button ******/
+#FAB {
+    position: fixed;
+    bottom: 38px;
+    right: 25px;
+    z-index: 10;
+    height: 70px;
+    width: 70px;
+    border: solid 1px #0f0f0f;
+    border-radius: 9%;
+    transform: rotate(-45deg);
+    animation-name: FABanimation;
+}
+#FAB i {
+    color: #1d1d1d;
+    transform: rotate(45deg);
+    animation-name: FABiconanimation;
+}
+/****** Modal ******/
+.modal-container {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    background-color: #1d1d1dbf;
+    pointer-events: none;
+}
+#my-modal {
+    display: none;
+    position: relative;
+    top: 2%;
+    /* height: 360px; */
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 3%;
+    background-color: #ffffff;
+    box-shadow: black 0px 0px 70px 40px;
+    color: darkslategray;
+}
+.modal-content {
+    border: none;
+}
+.modal-title, .modal-title+button span {
+    color: black;
+}
+#my-modal form label {
+    color: black;
+}
+.modal-footer {
+    border: none;
+}
+
+/****** Media Queries ******/
+@media (min-width: $breakpoint-laptop) {
+    #releases {
+        width: 50%;
+        float: left;
+    }
+    #releases .section-body {
+        min-height: 620px;
+    }
+    #releases .section-body ul {
+        display: contents;
+    }
+    #podcast {
+        width: 50%;
+        float: left;
+        min-height: 500px;
+    }
+    #labels {
+        max-width: 50%;
+        float: left;
+        padding-bottom: 0px;
+    }
+  }

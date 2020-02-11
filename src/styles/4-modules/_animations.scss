@@ -1,0 +1,58 @@
+    /* Scroll Button */
+    @-webkit-keyframes sdb03 {
+        0%      {opacity: 0;}
+        30%     {opacity: 1;}
+        60%     {box-shadow:0 0 0 60px rgba(255,255,255,.1); opacity: 0;}
+        100%    {opacity: 0;}
+    }
+    @keyframes sdb03 {
+        0%      {opacity: 0;}
+        30%     {opacity: 1;}
+        60%     {box-shadow:0 0 0 60px rgba(255,255,255,.1); opacity: 0;}
+        100%    {opacity: 0;}
+    }
+    
+        /* FAB - Animation */
+    @keyframes FABanimation {
+        0%      {transform: rotate(-45deg);}
+        25%     {border-radius: 9% 50%}
+        50%     {transform: rotate(135deg); border-radius: 40%;}
+        75%     {border-radius: 50% 9%;}
+        100%    {transform: rotate(315deg); border-radius: 9%;}
+    }
+    
+        /* FAB icon animation */
+    @keyframes FABiconanimation {
+        0%      {transform: rotate(45deg);}
+        50%     {transform: rotate(-135deg);}
+        100%    {transform: rotate(-315deg);}
+    }
+    
+    .animation-settings {
+        animation-iteration-count: infinite;
+        animation-duration: 24s;
+        animation-timing-function: cubic-bezier(0.74, 0.02, 0, 0.99);
+        animation-direction: alternate;
+    }
+    
+    .animation-settings:hover {
+        animation-play-state: paused;
+      }
+    
+      /* PRUEBAS */
+    
+    
+    /*  Bottom Bar Transition */
+    
+    @keyframes bottomBarTransition {
+        100% {top: 0;}
+    }
+    
+    footer.transition {
+        animation-name: bottomBarTransition;
+        animation-duration: 0.9s;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(0.76, -0.1, 0.15, 1.03);
+        animation-iteration-count: 2;
+    }
+    
