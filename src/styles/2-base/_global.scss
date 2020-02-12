@@ -26,3 +26,11 @@ li {
 .section {
     background-color: #000000bd;
 }
+
+/****** Main Container ******/
+body {
+    min-width: 320px;
+    margin-top: 20px;
+    font-family: $font-secondary;
+    font-weight: 300;
+}
