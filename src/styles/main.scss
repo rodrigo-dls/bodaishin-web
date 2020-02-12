@@ -1,11 +1,9 @@
-@use '1-helpers/1-helpers';
-@use '0-plugins/0-plugins';
-@use '2-base/2-base';
-@use '3-layout/3-layout';
-@use '4-modules/4-modules';
-@use '5-templates/5-templates';
-
-@use 'animation';
+@import '0-plugins/0-plugins';
+@import '1-helpers/1-helpers';
+@import '2-base/2-base';
+@import '3-layout/3-layout';
+@import '4-modules/4-modules';
+@import '5-templates/5-templates';
 
 /* Order of properties
     1. Display
@@ -17,16 +15,6 @@
     5. Child's Layout
     6. Animation
  */
-
-//  Variables
-$font-primary: 'Archivo', sans-serif;
-$font-secondary: 'Open Sans', sans-serif;
-$background-color-primary: white; 
-// Breakpoints
-$breakpoint-desktop: 1200px;
-$breakpoint-laptop: 950px;
-$breakpoint-tablet: 768px;
-$breakpoint-mobile: 400px;
 
 /****** General Custom ******/
 * {
