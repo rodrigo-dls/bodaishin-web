@@ -94,6 +94,68 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
+/****** Home ******/
+#home {
+  height: 90vh;
+  background-color: black;
+  justify-content: center;
+}
+
+#home .bckgr-hm-img {
+  /* display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center; */
+  /* background-image: url('../images/background-img-01.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; */
+}
+
+.home-content {
+  transform: translateY(20%);
+  height: inherit;
+}
+
+#title-home {
+  position: absolute;
+  width: 100%;
+}
+
+/****** Bio ******/
+#bio div.my-row {
+  margin-bottom: 15px;
+  background-image: url("../images/background-img-02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ffffff;
+  background-position: center center;
+  justify-content: space-evenly;
+}
+
+.bio-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 96%;
+  padding: 10px 55px;
+  background-color: #0000005e;
+  align-self: center;
+  align-items: center;
+  justify-content: space-evenly;
+  line-height: 30px;
+  text-align: center;
+}
+
+.bio-container hr {
+  width: 100%;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-top: 1px solid white;
+}
+
 /* Scroll Button */
 @-webkit-keyframes sdb03 {
   0% {
@@ -183,46 +245,6 @@ footer.transition {
   animation-iteration-count: 2;
 }
 
-/* Order of properties
-    1. Display
-    2. Position
-    3. Size/Shape
-    4. Design
-         I. Box-design
-        II. Font-design
-    5. Child's Layout
-    6. Animation
- */
-/****** Home ******/
-#home {
-  height: 90vh;
-  background-color: black;
-  justify-content: center;
-}
-
-#home .bckgr-hm-img {
-  /* display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center; */
-  /* background-image: url('../images/background-img-01.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center; */
-}
-
-.home-content {
-  transform: translateY(20%);
-  height: inherit;
-}
-
-#title-home {
-  position: absolute;
-  width: 100%;
-}
-
 /****** Boton de Scroll ******/
 #scrollButton a {
   position: absolute;
@@ -286,38 +308,16 @@ footer.transition {
   box-sizing: border-box;
 }
 
-/****** Bio ******/
-#bio div.my-row {
-  margin-bottom: 15px;
-  background-image: url("../images/background-img-02.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #ffffff;
-  background-position: center center;
-  justify-content: space-evenly;
-}
-
-.bio-container {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  height: 96%;
-  padding: 10px 55px;
-  background-color: #0000005e;
-  align-self: center;
-  align-items: center;
-  justify-content: space-evenly;
-  line-height: 30px;
-  text-align: center;
-}
-
-.bio-container hr {
-  width: 100%;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  border-top: 1px solid white;
-}
-
+/* Order of properties
+    1. Display
+    2. Position
+    3. Size/Shape
+    4. Design
+         I. Box-design
+        II. Font-design
+    5. Child's Layout
+    6. Animation
+ */
 /****** Section General Custom ******/
 .section-title-container {
   flex-direction: column;
