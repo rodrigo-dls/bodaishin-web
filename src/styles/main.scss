@@ -16,34 +16,6 @@
     6. Animation
  */
 
-/****** General Custom ******/
-* {
-    margin: 0px;
-    color: $background-color-primary;
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: $font-primary;
-    font-weight: 500;
-}
-ul {
-    margin: 0px;
-    padding: 0px;
-}
-li {
-    list-style: none;
-}
-.my-container{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.my-row{
-    display: flex;
-    flex-wrap: wrap;
-}
-.section {
-    background-color: #000000bd;
-}
 
 /****** Main Container ******/
 body {
