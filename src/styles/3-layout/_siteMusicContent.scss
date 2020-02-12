@@ -1,0 +1,104 @@
+
+/****** Releases ******/
+#releases {
+    padding-top: 10px;
+    background-color: #4a4a4a;
+}
+#releases .section-body {
+    padding: 0px 20px;
+    justify-content: center;
+}
+.item-container {
+    margin: 15px 0px;
+}
+.item-header {
+    display: flex;
+    padding: 0px 20px;
+}
+.header-content {
+    flex-basis: 100%;
+}
+.header-content h3 {
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+#releases .item-header .header-img  {
+    margin: 10px;
+    margin-left: 0px !important;
+    border-radius: 3px;
+    flex-basis: 100%;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.img-container-01 {
+    background-image: url("../images/release-cover-three-of-a-kind.jpeg");
+    /* background-color: #424242; */
+}
+.img-container-02 {
+    background-image: url("../images/release-cover-downtempo-grooves.jpeg");
+    /* background-color: #424242; */
+}
+.music-player-container {
+    display: flex;
+    width: 400px;
+    margin: 5px auto;
+    border-radius: 26px;
+    box-shadow: black 0px 0px 10px 0px;
+    background-color: black;
+}
+.music-player-container audio {
+    width: 100%;
+}
+
+/****** Circle Of Life ******/
+#podcast {
+    padding-top: 10px;
+    background-color: #353535;
+}
+.podcast-container {
+    flex-direction: column;
+    max-height: 94%;
+    align-content: center;
+    justify-content: space-evenly;
+}
+.podcast-container h2 {
+    font-size: 1.3rem;
+}
+
+/****** Labels ******/
+#labels {
+    margin-bottom: 59px; /* to float over the bottom bar */
+    padding-bottom: 40px;
+    border-bottom: 1px solid white;
+    background-color: #2b2b2b;
+}
+.label-container {
+    padding: 0px 20px;
+    justify-content: space-evenly;
+}
+.label-container div {
+    height: 100px;
+    width: 100px;
+    margin: 15px 0px;
+    border-radius: 5%;
+    box-shadow: black 0px 0px 5px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    background-position: center center;
+}
+.label-container div:hover {
+    opacity: 0.8;
+}
+.label-bckgr-img-avenue {
+    background-image: url("../images/logo-3rd-avenue-02.jpg");
+}
+.label-bckgr-img-purr {
+    background-image: url("../images/logo-the-purr-01.png");
+}
+.label-bckgr-img-flug-lab {
+    background-image: url("../images/logo-flug-lab-01.png");
+    background-size: contain !important;
+}
