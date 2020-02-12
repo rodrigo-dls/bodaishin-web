@@ -1,0 +1,28 @@
+
+/****** Home ******/
+#home {
+    height: 90vh;
+    background-color: black;
+    justify-content: center;
+}
+#home .bckgr-hm-img {
+    /* display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center; */
+
+    /* background-image: url('../images/background-img-01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; */
+}
+.home-content {
+    transform: translateY(20%);
+    height: inherit;
+}
+#title-home {
+    position: absolute;
+    width: 100%;
+}
