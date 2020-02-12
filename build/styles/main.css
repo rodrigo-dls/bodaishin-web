@@ -402,23 +402,17 @@ template {
 }
 
 /****** Navbar ******/
-.nav-container {
+.nav {
   position: fixed;
   top: 0;
   z-index: 7;
   width: 100%;
   min-height: 70px;
-}
-
-nav {
-  display: flex;
-  width: 100%;
   padding: 10px 0;
   background-color: black;
   align-items: center;
 }
-
-nav ul {
+.nav__list {
   display: flex;
   height: 1em;
   width: 100%;
@@ -427,8 +421,7 @@ nav ul {
   list-style-type: none;
   justify-content: space-around;
 }
-
-nav ul li {
+.nav__item {
   display: flex;
   width: 100%;
   border-right: 1px solid white;
@@ -436,19 +429,16 @@ nav ul li {
   align-items: center;
   text-align: center;
 }
-
-nav ul li:last-child {
+.nav__item:last-child {
   border-right: 0;
 }
-
-nav ul li a {
+.nav__link {
   width: 100%;
   padding: 1rem 1rem;
   color: #ffffff;
   line-height: 100%;
 }
-
-nav ul li a:hover {
+.nav__link:hover {
   text-decoration: none;
   color: white;
   font-weight: bold;
