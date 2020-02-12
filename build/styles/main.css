@@ -445,10 +445,23 @@ template {
 }
 
 /****** Home ******/
-#home {
+.home {
   height: 90vh;
+  margin-top: 70px;
   background-color: black;
+}
+.home__content {
+  height: 40%;
   justify-content: center;
+}
+.home__image {
+  position: absolute;
+  width: 50%;
+  align-self: center;
+}
+.home__image--circle-of-life {
+  width: 25%;
+  transform: translateY(-30px);
 }
 
 #home .bckgr-hm-img {
@@ -462,16 +475,6 @@ template {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; */
-}
-
-.home-content {
-  transform: translateY(20%);
-  height: inherit;
-}
-
-#title-home {
-  position: absolute;
-  width: 100%;
 }
 
 /****** Bio ******/
