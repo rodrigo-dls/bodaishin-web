@@ -16,65 +16,6 @@
     6. Animation
  */
 
-    /****** Boton de Scroll ******/
-#scrollButton a {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    z-index: 2;
-    padding-top: 60px;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    color: #fff;
-    font : normal 400 20px/1 'Josefin Sans', sans-serif;
-    letter-spacing: .1em;
-    text-decoration: none;
-    transition: opacity .3s;
-}
-#scrollButton a:hover {
-    opacity: .5;
-}
-#scrollButton a span {
-    position: absolute;
-    top: -55px;
-    left: 50%;
-    width: 46px;
-    height: 46px;
-    margin-left: -23px;
-    border-radius: 100%;
-    box-sizing: border-box;
-}
-#scrollButton a span::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    content: '';
-    width: 16px;
-    height: 16px;
-    margin: -12px 0 0 -8px;
-    border-left: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-}
-#scrollButton a span::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    content: '';
-    width: 44px;
-    height: 44px;
-    box-shadow: 0 0 0 0 rgba(255,255,255,.1);
-    border-radius: 100%;
-    opacity: 0;
-    -webkit-animation: sdb03 3.5s ;
-    animation: sdb03 3.5s infinite;
-    box-sizing: border-box;
-}
-
 /****** Bio ******/
 #bio {
 
