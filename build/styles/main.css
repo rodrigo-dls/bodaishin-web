@@ -363,6 +363,49 @@ footer i {
   transform: translateY(-10px);
 }
 
+/****** Modal ******/
+.modal-container {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+  height: 100vh;
+  width: 100%;
+  background-color: #1d1d1dbf;
+  pointer-events: none;
+}
+
+#my-modal {
+  display: none;
+  position: relative;
+  top: 2%;
+  /* height: 360px; */
+  max-width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 3%;
+  background-color: #ffffff;
+  box-shadow: black 0px 0px 70px 40px;
+  color: darkslategray;
+}
+
+.modal-content {
+  border: none;
+}
+
+.modal-title, .modal-title + button span {
+  color: black;
+}
+
+#my-modal form label {
+  color: black;
+}
+
+.modal-footer {
+  border: none;
+}
+
 /* Scroll Button */
 @-webkit-keyframes sdb03 {
   0% {
@@ -535,59 +578,6 @@ footer.transition {
   animation-name: FABiconanimation;
 }
 
-/* Order of properties
-    1. Display
-    2. Position
-    3. Size/Shape
-    4. Design
-         I. Box-design
-        II. Font-design
-    5. Child's Layout
-    6. Animation
- */
-/****** Modal ******/
-.modal-container {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  z-index: 9;
-  height: 100vh;
-  width: 100%;
-  background-color: #1d1d1dbf;
-  pointer-events: none;
-}
-
-#my-modal {
-  display: none;
-  position: relative;
-  top: 2%;
-  /* height: 360px; */
-  max-width: 330px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  border-radius: 3%;
-  background-color: #ffffff;
-  box-shadow: black 0px 0px 70px 40px;
-  color: darkslategray;
-}
-
-.modal-content {
-  border: none;
-}
-
-.modal-title, .modal-title + button span {
-  color: black;
-}
-
-#my-modal form label {
-  color: black;
-}
-
-.modal-footer {
-  border: none;
-}
-
 /****** Media Queries ******/
 @media (min-width: 950px) {
   #releases {
@@ -615,5 +605,15 @@ footer.transition {
     padding-bottom: 0px;
   }
 }
+/* Order of properties
+    1. Display
+    2. Position
+    3. Size/Shape
+    4. Design
+         I. Box-design
+        II. Font-design
+    5. Child's Layout
+    6. Animation
+ */
 
 /*# sourceMappingURL=main.css.map */
