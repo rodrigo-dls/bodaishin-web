@@ -404,6 +404,7 @@ template {
 /****** Navbar ******/
 .nav {
   position: fixed;
+  /* probar con Sticky (anulando el padding-top del Home section)*/
   top: 0;
   z-index: 7;
   width: 100%;
@@ -510,35 +511,35 @@ template {
 }
 
 /****** Releases ******/
-#releases {
+.releases {
   padding-top: 10px;
   background-color: #4a4a4a;
 }
 
-#releases .section-body {
+.releases__body {
   padding: 0px 20px;
   justify-content: center;
 }
 
-.item-container {
+.releases__item {
   margin: 15px 0px;
 }
 
-.item-header {
+.releases__item-header {
   display: flex;
   padding: 0px 20px;
 }
 
-.header-content {
+.releases__item-header-content {
   flex-basis: 100%;
 }
 
-.header-content h3 {
+.releases__item-header-content-title {
   margin-top: 10px;
   font-size: 1.3rem;
 }
 
-#releases .item-header .header-img {
+.releases__item-header-img {
   margin: 10px;
   margin-left: 0px !important;
   border-radius: 3px;
@@ -550,27 +551,23 @@ template {
 }
 
 .img-container-01 {
-  background-image: url("../images/release-cover-three-of-a-kind.jpeg");
+  background-image: url("../../../build/images/release-cover-downtempo-grooves.jpeg");
   /* background-color: #424242; */
 }
 
 .img-container-02 {
-  background-image: url("../images/release-cover-downtempo-grooves.jpeg");
+  background-image: url("../../../build/images/release-cover-three-of-a-kind.jpeg");
   /* background-color: #424242; */
 }
 
-.music-player-container {
+.music-player {
   display: flex;
+  width: 300px;
   margin: 5px auto;
   border-radius: 26px;
   box-shadow: black 0px 0px 10px 0px;
   background-color: black;
 }
-
-.music-player-container audio {
-  width: 100%;
-}
-
 /****** Circle Of Life ******/
 #podcast {
   padding-top: 10px;
@@ -636,7 +633,6 @@ footer {
   position: fixed;
   top: 730px;
   bottom: 0;
-  left: 0;
   z-index: 8;
   background-color: #151515;
   /* transition: top 1s; */
