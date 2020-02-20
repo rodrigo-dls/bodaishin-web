@@ -561,7 +561,6 @@ template {
 
 .music-player-container {
   display: flex;
-  width: 400px;
   margin: 5px auto;
   border-radius: 26px;
   box-shadow: black 0px 0px 10px 0px;
@@ -636,7 +635,6 @@ template {
 footer {
   position: fixed;
   top: 730px;
-  right: 0;
   bottom: 0;
   left: 0;
   z-index: 8;
@@ -908,6 +906,123 @@ footer.transition {
   color: #1d1d1d;
   transform: rotate(45deg);
   animation-name: FABiconanimation;
+}
+
+@keyframes faseBackground {
+  0% {
+    box-shadow: white 0px 0px 600px 1000px;
+  }
+  100% {
+    box-shadow: white 0px 0px 1px 1px;
+  }
+}
+@keyframes faseZero {
+  0% {
+    height: 0;
+  }
+  20% {
+    height: 75px;
+  }
+  100% {
+    height: 75px;
+  }
+}
+@keyframes faseILeft {
+  0% {
+    left: 50%;
+  }
+  20% {
+    left: 50%;
+  }
+  100% {
+    left: 22.5px;
+  }
+}
+@keyframes faseIRight {
+  0% {
+    right: 50%;
+  }
+  20% {
+    right: 50%;
+  }
+  100% {
+    right: 22.5px;
+  }
+}
+@keyframes openIn {
+  0% {
+    clip-path: inset(150px);
+  }
+  20% {
+    clip-path: inset(150px);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.animation__container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 375px;
+  height: 315px;
+  overflow: hidden;
+  background-color: black;
+  top: auto;
+}
+
+.animation__centro {
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: white 0px 0px 200px 1000px;
+  animation: faseBackground 2.5s forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.animation__centro::before,
+.animation__centro::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 3px;
+  background-color: white;
+  z-index: 1;
+}
+
+.animation__centro::before {
+  animation: faseZero, faseILeft, faseZero;
+  animation-fill-mode: forwards;
+  animation-direction: normal, normal, reverse;
+  animation-delay: 2.5s, 2.5s, 3s;
+  animation-timing-function: cubic-bezier(0.99, 0, 0, 0.99);
+  animation-duration: 2s;
+}
+
+.animation__centro::after {
+  animation: faseZero, faseIRight, faseZero;
+  animation-fill-mode: forwards;
+  animation-direction: normal, normal, reverse;
+  animation-delay: 2.5s, 2.5s, 3s;
+  animation-timing-function: cubic-bezier(0.99, 0, 0, 0.99);
+  animation-duration: 2s;
+}
+
+.animation__content {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: inset(50%);
+  height: 75px;
+  width: 300px;
+  animation: openIn forwards;
+  animation-delay: 2.5s;
+  animation-timing-function: cubic-bezier(1, 0, 0.24, 1.07);
+  animation-duration: 2s;
 }
 
 /****** Media Queries ******/
