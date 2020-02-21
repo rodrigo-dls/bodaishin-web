@@ -32,22 +32,18 @@ li {
 .section {
   background-color: #000000bd;
 }
-
-/****** Section General Custom ******/
-.section-title-container {
+.section__header {
   flex-direction: column;
   padding-top: 20px;
 }
-
-.section-title {
+.section__title {
   margin-bottom: 0px;
   color: white;
   font-size: 2rem;
   text-align: center;
   letter-spacing: 8px;
 }
-
-.section-title-container hr {
+.section__hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0px;
@@ -515,30 +511,24 @@ template {
   padding-top: 10px;
   background-color: #4a4a4a;
 }
-
 .releases__body {
   padding: 0px 20px;
   justify-content: center;
 }
-
 .releases__item {
   margin: 15px 0px;
 }
-
 .releases__item-header {
   display: flex;
   padding: 0px 20px;
 }
-
 .releases__item-header-content {
   flex-basis: 100%;
 }
-
 .releases__item-header-content-title {
   margin-top: 10px;
   font-size: 1.3rem;
 }
-
 .releases__item-header-img {
   margin: 10px;
   margin-left: 0px !important;
@@ -569,37 +559,33 @@ template {
   background-color: black;
 }
 /****** Circle Of Life ******/
-#podcast {
+.podcast {
   padding-top: 10px;
   background-color: #353535;
 }
-
-.podcast-container {
+.podcast__body {
   flex-direction: column;
   max-height: 94%;
   align-content: center;
   justify-content: space-evenly;
 }
-
-.podcast-container h2 {
+.podcast__body-title {
   font-size: 1.3rem;
 }
 
 /****** Labels ******/
-#labels {
+.labels {
   margin-bottom: 59px;
   /* to float over the bottom bar */
   padding-bottom: 40px;
   border-bottom: 1px solid white;
   background-color: #2b2b2b;
 }
-
-.label-container {
+.labels__body {
   padding: 0px 20px;
   justify-content: space-evenly;
 }
-
-.label-container div {
+.labels__image {
   height: 100px;
   width: 100px;
   margin: 15px 0px;
@@ -610,21 +596,17 @@ template {
   background-color: #ffffff;
   background-position: center center;
 }
-
-.label-container div:hover {
+.labels__image:hover {
   opacity: 0.8;
 }
-
-.label-bckgr-img-avenue {
-  background-image: url("../images/logo-3rd-avenue-02.jpg");
+.labels__image--avenue {
+  background-image: url("../../../build/images/logo-3rd-avenue-02.jpg");
 }
-
-.label-bckgr-img-purr {
-  background-image: url("../images/logo-the-purr-01.png");
+.labels__image--purr {
+  background-image: url("../../../build/images/logo-the-purr-01.png");
 }
-
-.label-bckgr-img-flug-lab {
-  background-image: url("../images/logo-flug-lab-01.png");
+.labels__image--flug-lab {
+  background-image: url("../../../build/images/logo-flug-lab-01.png");
   background-size: contain !important;
 }
 

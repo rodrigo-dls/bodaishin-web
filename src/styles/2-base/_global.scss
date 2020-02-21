@@ -25,25 +25,26 @@ li {
 }
 .section {
     background-color: #000000bd;
-}
 
-/****** Section General Custom ******/
-.section-title-container {
-    flex-direction: column;
-    padding-top: 20px;
-}
-.section-title {
-    margin-bottom: 0px;
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-    letter-spacing: 8px;
-}
-.section-title-container hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0px;
-    border-top: 1px solid rgb(255, 255, 255);   
+    &__header {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    &__title {
+        margin-bottom: 0px;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        letter-spacing: 8px;
+    }
+
+    &__hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0px;
+        border-top: 1px solid rgb(255, 255, 255);   
+    }
 }
 
 /****** Main Container ******/

@@ -3,35 +3,42 @@
 .releases {
     padding-top: 10px;
     background-color: #4a4a4a;
+
+    &__body {
+        padding: 0px 20px;
+        justify-content: center;
+    }
+
+    &__item {
+        margin: 15px 0px;
+    }
+
+    &__item-header {
+        display: flex;
+        padding: 0px 20px;
+    }
+
+    &__item-header-content {
+        flex-basis: 100%;
+    }
+
+    &__item-header-content-title {
+        margin-top: 10px;
+        font-size: 1.3rem;
+    }
+
+    &__item-header-img {
+        margin: 10px;
+        margin-left: 0px !important;
+        border-radius: 3px;
+        flex-basis: 100%;
+        height: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 }
-.releases__body {
-    padding: 0px 20px;
-    justify-content: center;
-}
-.releases__item {
-    margin: 15px 0px;
-}
-.releases__item-header {
-    display: flex;
-    padding: 0px 20px;
-}
-.releases__item-header-content {
-    flex-basis: 100%;
-}
-.releases__item-header-content-title {
-    margin-top: 10px;
-    font-size: 1.3rem;
-}
-.releases__item-header-img  {
-    margin: 10px;
-    margin-left: 0px !important;
-    border-radius: 3px;
-    flex-basis: 100%;
-    height: 150px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
+
 .img-container-01 {
     background-image: url("../../../build/images/release-cover-downtempo-grooves.jpeg");
     /* background-color: #424242; */
@@ -54,52 +61,60 @@
 }
 
 /****** Circle Of Life ******/
-#podcast {
+.podcast {
     padding-top: 10px;
     background-color: #353535;
-}
-.podcast-container {
-    flex-direction: column;
-    max-height: 94%;
-    align-content: center;
-    justify-content: space-evenly;
-}
-.podcast-container h2 {
-    font-size: 1.3rem;
+
+    &__body {
+        flex-direction: column;
+        max-height: 94%;
+        align-content: center;
+        justify-content: space-evenly;
+    }
+
+    &__body-title {
+        font-size: 1.3rem;
+    }
 }
 
 /****** Labels ******/
-#labels {
+.labels {
     margin-bottom: 59px; /* to float over the bottom bar */
     padding-bottom: 40px;
     border-bottom: 1px solid white;
     background-color: #2b2b2b;
-}
-.label-container {
-    padding: 0px 20px;
-    justify-content: space-evenly;
-}
-.label-container div {
-    height: 100px;
-    width: 100px;
-    margin: 15px 0px;
-    border-radius: 5%;
-    box-shadow: black 0px 0px 5px 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #ffffff;
-    background-position: center center;
-}
-.label-container div:hover {
-    opacity: 0.8;
-}
-.label-bckgr-img-avenue {
-    background-image: url("../images/logo-3rd-avenue-02.jpg");
-}
-.label-bckgr-img-purr {
-    background-image: url("../images/logo-the-purr-01.png");
-}
-.label-bckgr-img-flug-lab {
-    background-image: url("../images/logo-flug-lab-01.png");
-    background-size: contain !important;
+
+    &__body {
+        padding: 0px 20px;
+        justify-content: space-evenly;
+    }
+
+    &__image {
+        height: 100px;
+        width: 100px;
+        margin: 15px 0px;
+        border-radius: 5%;
+        box-shadow: black 0px 0px 5px 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #ffffff;
+        background-position: center center;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &--avenue {
+            background-image: url("../../../build/images/logo-3rd-avenue-02.jpg");
+        }
+
+        &--purr {
+            background-image: url("../../../build/images/logo-the-purr-01.png");
+        }
+
+        &--flug-lab {
+            background-image: url("../../../build/images/logo-flug-lab-01.png");
+            background-size: contain !important;
+        }
+    }
 }
