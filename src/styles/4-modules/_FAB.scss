@@ -1,5 +1,5 @@
-/****** FAB - Floating Actin Button ******/
-#FAB {
+/****** FAB - Floating Action Button ******/
+.FAB {
     position: fixed;
     bottom: 38px;
     right: 25px;
@@ -7,12 +7,13 @@
     height: 70px;
     width: 70px;
     border: solid 1px #0f0f0f;
-    border-radius: 9%;
-    transform: rotate(-45deg);
-    animation-name: FABanimation;
-}
-#FAB i {
+    border-radius: 50%;
+    // transform: rotate(-45deg);
+    // animation-name: FABanimation;
+    
+    i {
     color: #1d1d1d;
-    transform: rotate(45deg);
-    animation-name: FABiconanimation;
+    // transform: rotate(45deg);
+    // animation-name: FABiconanimation;
+    }
 }
