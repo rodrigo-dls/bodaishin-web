@@ -1,12 +1,15 @@
 /****** Home ******/
 .home {
-    height: 90vh;
+    height: calc(100vh - 70px - 60px);
     margin-top: $navbar-min-height;
     background-color: black;
+    padding-top: 70px;
+    flex-direction: column;
     
     &__content {
-        height: 40%;
+        height: 8em;
         justify-content: center;
+        align-items: center;
     }
 
     &__image {
@@ -15,22 +18,8 @@
         align-self: center;
 
         &--circle-of-life {
-            width: 25%;
-            transform: translateY(-30px);
+            width: 8em;
+            // transform: translateY(-30px);
         }
     }
-}
-
-#home .bckgr-hm-img {
-    /* display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center; */
-
-    /* background-image: url('../images/background-img-01.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; */
 }

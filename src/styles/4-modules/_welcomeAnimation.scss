@@ -2,8 +2,8 @@
 // Variables
     // elements sizes
         // container
-        $container-width: 375px;
-        $container-height: 315px;
+        $container-width: 300px;
+        $container-height: 75px;
         // separador
         $separador-height: 10px;
         // centro
@@ -125,7 +125,7 @@
         width: $content-width;
     }
 // Producto
-    .animation__container { @include container(black, auto);}
+    .animation__container { @include container(transparent, auto);}
     .animation__centro {
         // Diseno
         @include centroDesign;

@@ -37,7 +37,7 @@ li {
   padding-top: 20px;
 }
 .section__title {
-  margin-bottom: 0px;
+  margin: 0px;
   color: white;
   font-size: 2rem;
   text-align: center;
@@ -443,13 +443,16 @@ template {
 
 /****** Home ******/
 .home {
-  height: 90vh;
+  height: calc(100vh - 70px - 60px);
   margin-top: 70px;
   background-color: black;
+  padding-top: 70px;
+  flex-direction: column;
 }
 .home__content {
-  height: 40%;
+  height: 8em;
   justify-content: center;
+  align-items: center;
 }
 .home__image {
   position: absolute;
@@ -457,53 +460,31 @@ template {
   align-self: center;
 }
 .home__image--circle-of-life {
-  width: 25%;
-  transform: translateY(-30px);
-}
-
-#home .bckgr-hm-img {
-  /* display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center; */
-  /* background-image: url('../images/background-img-01.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center; */
+  width: 8em;
 }
 
 /****** Bio ******/
-.bio__image {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.bio {
+  background-color: #5E5E5E;
 }
-
-.bio__container {
-  background-color: #585858;
-  justify-content: space-evenly;
-}
-.bio__container hr {
-  width: 100%;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  border-top: 1px solid white;
-}
-
 .bio__content {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  height: 96%;
-  padding: 10px 55px;
-  background-color: #0000005e;
+  max-width: 700px;
   align-self: center;
   align-items: center;
   justify-content: space-evenly;
-  line-height: 30px;
+  line-height: 1.6em;
   text-align: center;
+}
+.bio__image {
+  position: relative;
+  max-width: 100%;
+  border-top: white solid 1px;
+  border-bottom: white solid 1px;
+}
+.bio__body {
+  padding: 0 3em;
 }
 
 /****** Releases ******/
@@ -611,64 +592,51 @@ template {
 }
 
 /****** Footer ******/
-footer {
+.footer {
   position: fixed;
-  top: 730px;
   bottom: 0;
   z-index: 8;
   background-color: #151515;
   /* transition: top 1s; */
 }
-
-footer ul {
+.footer__list {
   display: flex;
   height: 60px;
-  /* width: 100%; */
+  width: 70%;
   padding: 0;
   align-items: center;
   list-style-type: none;
-  justify-content: left;
+  justify-content: space-evenly;
 }
-
-footer ul li {
+.footer__list-item {
   height: fit-content;
-  margin: 0px 1em;
 }
-
-footer ul li a {
+.footer__link {
   display: contents;
 }
-
-footer i {
+.footer__icon {
   font-size: 1.5em !important;
   padding: 0px 0px 12px;
-}
-
-.fa-instagram,
-.fa-soundcloud,
-.fa-headphones,
-.fa-facebook {
   transition: all 0.25s;
+}
+.footer__icon:hover {
+  transform: translateY(-10px);
 }
 
 .fa-instagram:hover {
   color: #c33ca1;
-  transform: translateY(-10px);
 }
 
 .fa-soundcloud:hover {
   color: #ff6700;
-  transform: translateY(-10px);
 }
 
 .fa-headphones:hover {
   color: #94d53b;
-  transform: translateY(-10px);
 }
 
 .fa-facebook:hover {
   color: #2878b5;
-  transform: translateY(-10px);
 }
 
 /****** Modal ******/
@@ -869,7 +837,7 @@ footer.transition {
 /****** FAB - Floating Action Button ******/
 .FAB {
   position: fixed;
-  bottom: 38px;
+  bottom: 25px;
   right: 25px;
   z-index: 10;
   height: 70px;
@@ -908,7 +876,7 @@ footer.transition {
     left: 50%;
   }
   100% {
-    left: 22.5px;
+    left: -15px;
   }
 }
 @keyframes faseIRight {
@@ -919,7 +887,7 @@ footer.transition {
     right: 50%;
   }
   100% {
-    right: 22.5px;
+    right: -15px;
   }
 }
 @keyframes openIn {
@@ -938,10 +906,10 @@ footer.transition {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 375px;
-  height: 315px;
+  width: 300px;
+  height: 75px;
   overflow: hidden;
-  background-color: black;
+  background-color: transparent;
   top: auto;
 }
 
