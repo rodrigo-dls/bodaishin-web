@@ -556,15 +556,19 @@ template {
 
 /****** Labels ******/
 .labels {
-  margin-bottom: 59px;
+  margin-bottom: 60px;
   /* to float over the bottom bar */
   padding-bottom: 40px;
   border-bottom: 1px solid white;
   background-color: #2b2b2b;
 }
 .labels__body {
-  padding: 0px 20px;
-  justify-content: space-evenly;
+  padding: 0px 2em;
+}
+.labels__list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .labels__image {
   height: 100px;

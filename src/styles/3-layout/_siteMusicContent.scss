@@ -79,14 +79,19 @@
 
 /****** Labels ******/
 .labels {
-    margin-bottom: 59px; /* to float over the bottom bar */
+    margin-bottom: $footer-min-height; /* to float over the bottom bar */
     padding-bottom: 40px;
     border-bottom: 1px solid white;
     background-color: #2b2b2b;
 
     &__body {
-        padding: 0px 20px;
-        justify-content: space-evenly;
+        padding: 0px 2em;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 
     &__image {
