@@ -1,9 +1,10 @@
 /****** Releases ******/
 .releases {
-    padding-top: 10px;
+    border-top: 1px solid white;
     background-color: #4a4a4a;
-
+    
     &__body {
+        min-height: $section-min-height;
         padding: 0px 20px;
         justify-content: center;
     }
@@ -62,12 +63,12 @@
 
 /****** Circle Of Life ******/
 .podcast {
-    padding-top: 10px;
+    border-top: 1px solid white;
     background-color: #353535;
 
     &__body {
         flex-direction: column;
-        max-height: 94%;
+        min-height: $section-min-height;
         align-content: center;
         justify-content: space-evenly;
     }
@@ -81,6 +82,7 @@
 .labels {
     margin-bottom: $footer-min-height; /* to float over the bottom bar */
     padding-bottom: 40px;
+    border-top: 1px solid white;
     border-bottom: 1px solid white;
     background-color: #2b2b2b;
 

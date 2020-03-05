@@ -13,6 +13,8 @@ $background-color-primary: white;
 
 // Blacks
 
+// Modal
+$modal-main-color: #8247e8;
 
 // Complementaries
 $complementary-color: #8247e8;
@@ -23,6 +25,9 @@ $complementary-color: #8247e8;
 $navbar-min-height: 70px;
 $footer-min-height: 60px;
 
+$section-min-height: calc(100vh - 70px - 71px - 60px);
+
+$site-content-height: calc(100vh - 70px - 60px);
 // ************************
 // Breakpoints
 // ************************

@@ -1,5 +1,6 @@
 /****** General Custom ******/
 * {
+    box-sizing: border-box;
     margin: 0px;
     color: $background-color-primary;
 }
@@ -28,7 +29,6 @@ li {
 
     &__header {
         flex-direction: column;
-        padding-top: 20px;
     }
 
     &__title {
@@ -37,17 +37,20 @@ li {
         font-size: 2rem;
         text-align: center;
         letter-spacing: 8px;
+        padding: 0.5em 0px;
     }
 
     &__hr {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin: 0;
         border: 0px;
         border-top: 1px solid rgb(255, 255, 255);   
     }
 }
 
 /****** Main Container ******/
+html{
+    scroll-behavior: smooth;
+}
 body {
     min-width: 320px;
     margin-top: 20px;

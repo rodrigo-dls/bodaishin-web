@@ -211,32 +211,31 @@
     <!-- Modal -->
     <div class="modal-background modal-container" tabindex="-1" role="dialog" aria-hidden="true">
         <div id="my-modal" class="modal" role="document">
-            <div class="modal__content modal-content">
-                <div class="modal__header modal-header">
-                    <h5 class="modal__tittle modal-title">Contact me</h5>
-                    <button type="button" class="modal__close-button close" data-dismiss="modal" aria-label="Close">
-                        <span class="modal__span" aria-hidden="true">&times;</span>
+            <div class="modal__content">
+                <div class="modal__header">
+                    <h5 class="modal__tittle">Get in touch!</h5>
+                    <button type="button" id="modal__close-button" class="modal__close-button" data-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times modal__span"></i>
                     </button>
                 </div>
-                <div class="modal__body modal-body">
+                <div class="modal__body">
                     <form class="contact-form">
-                        <div class="contact-form__section form-group">
+                        <div class="contact-form__section">
                             <label class="contact-form__label" for="recipient-name">Recipient:</label>
-                            <input type="text" class="contact-form__input form-control" id="recipient-name">
+                            <input type="text" class="contact-form__input contact-form__field-style" id="recipient-name">
                         </div>
-                        <div class="contact-form__section form-group">
-                            <label for="message-text" class="contact-form__label col-form-label">Message:</label>
-                            <textarea class="contact-form__textarea form-control" id="message-text"></textarea>
+                        <div class="contact-form__section">
+                            <label class="contact-form__label" for="message-text">Message:</label>
+                            <textarea class="contact-form__textarea contact-form__field-style" id="message-text"></textarea>
                         </div>
                     </form>
                 </div>
-                <div class="modal__footer modal-footer">
-                    <button type="button" class="modal__button-submit btn btn-primary">Send message</button>
+                <div class="modal__footer">
+                    <button type="button" class="modal__button-submit">Send message</button>
                 </div>
             </div>
         </div>
     </div>
-
 
 </body>
 

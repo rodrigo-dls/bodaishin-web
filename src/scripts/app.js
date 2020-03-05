@@ -34,7 +34,8 @@
   var $modal_button = $("#FAB")[0];
   var $modal_container = $("body > div.modal-container")[0];
   var $modal_content = $("#my-modal")[0];
-  var modal_close_button = document.querySelector("#my-modal > div > div.modal-header > button");
+  // Tengo que arreglar el boton de cierre
+  var $modal_close_button = document.querySelector("#modal__close-button");
   
     // My Modal
       // Modal Button
@@ -44,7 +45,8 @@
     });
   
       // Modal Close Button
-    $(modal_close_button).on('click', function() {
+    $($modal_close_button).on('click', function() {
+      console.log('Llega el selector');
       $($modal_container).fadeOut();
       $($modal_content).slideUp();
     });

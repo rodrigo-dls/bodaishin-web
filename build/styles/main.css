@@ -1,5 +1,6 @@
 /****** General Custom ******/
 * {
+  box-sizing: border-box;
   margin: 0px;
   color: white;
 }
@@ -34,7 +35,6 @@ li {
 }
 .section__header {
   flex-direction: column;
-  padding-top: 20px;
 }
 .section__title {
   margin: 0px;
@@ -42,15 +42,19 @@ li {
   font-size: 2rem;
   text-align: center;
   letter-spacing: 8px;
+  padding: 0.5em 0px;
 }
 .section__hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 0;
   border: 0px;
   border-top: 1px solid white;
 }
 
 /****** Main Container ******/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-width: 320px;
   margin-top: 20px;
@@ -471,6 +475,7 @@ template {
   display: flex;
   flex-direction: column;
   max-width: 700px;
+  min-height: calc(100vh - 70px - 60px);
   align-self: center;
   align-items: center;
   justify-content: space-evenly;
@@ -489,10 +494,11 @@ template {
 
 /****** Releases ******/
 .releases {
-  padding-top: 10px;
+  border-top: 1px solid white;
   background-color: #4a4a4a;
 }
 .releases__body {
+  min-height: calc(100vh - 70px - 71px - 60px);
   padding: 0px 20px;
   justify-content: center;
 }
@@ -541,12 +547,12 @@ template {
 }
 /****** Circle Of Life ******/
 .podcast {
-  padding-top: 10px;
+  border-top: 1px solid white;
   background-color: #353535;
 }
 .podcast__body {
   flex-direction: column;
-  max-height: 94%;
+  min-height: calc(100vh - 70px - 71px - 60px);
   align-content: center;
   justify-content: space-evenly;
 }
@@ -559,6 +565,7 @@ template {
   margin-bottom: 60px;
   /* to float over the bottom bar */
   padding-bottom: 40px;
+  border-top: 1px solid white;
   border-bottom: 1px solid white;
   background-color: #2b2b2b;
 }
@@ -655,35 +662,75 @@ template {
   pointer-events: none;
 }
 
-#my-modal {
+.modal {
   display: none;
   position: relative;
   top: 2%;
-  /* height: 360px; */
+  height: fit-content;
   max-width: 330px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
   border-radius: 3%;
-  background-color: #ffffff;
-  box-shadow: black 0px 0px 70px 40px;
-  color: darkslategray;
 }
-
-.modal-content {
+.modal__content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  pointer-events: auto;
+}
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  border-bottom: 1px solid #8247e8;
+}
+.modal__tittle {
+  margin: 0;
+  line-height: 1.5;
+  color: #8247e8;
+  font-size: 1.4em;
+}
+.modal__close-button {
+  background: transparent;
   border: none;
 }
-
-.modal-title, .modal-title + button span {
-  color: black;
+.modal__span {
+  color: #8247e8;
 }
-
-#my-modal form label {
-  color: black;
+.modal__body {
+  padding: 1em;
 }
-
-.modal-footer {
+.modal .contact-form__section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.modal .contact-form__label {
+  color: #8247e8;
+}
+.modal .contact-form__textarea {
+  min-height: 5em;
+}
+.modal .contact-form__field-style {
+  height: 2em;
+  padding: 0.35em;
+  border: 1px solid #8247e8;
+  border-radius: 0.3em;
+  color: #8247e8;
+}
+.modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
   border: none;
+}
+.modal__button-submit {
+  padding: 0.6em 0.8em;
+  border-radius: 0.3em;
+  background: #8247e8;
 }
 
 /* Scroll Button */

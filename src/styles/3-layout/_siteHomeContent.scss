@@ -1,6 +1,6 @@
 /****** Home ******/
 .home {
-    height: calc(100vh - 70px - 60px);
+    height: $site-content-height;
     margin-top: $navbar-min-height;
     background-color: black;
     padding-top: 70px;

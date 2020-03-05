@@ -9,29 +9,88 @@
     background-color: #1d1d1dbf;
     pointer-events: none;
 }
-#my-modal {
+.modal {
     display: none;
     position: relative;
     top: 2%;
-    /* height: 360px; */
+    height: fit-content;
     max-width: 330px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
     border-radius: 3%;
-    background-color: #ffffff;
-    box-shadow: black 0px 0px 70px 40px;
-    color: darkslategray;
-}
-.modal-content {
+    // box-shadow: black 0px 0px 70px 40px;
+
+    &__content {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        border: none;
+        background-color: #fff;
+        pointer-events: auto;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        border-bottom: 1px solid $modal-main-color;
+    }
+
+    &__tittle {
+        margin: 0;
+        line-height: 1.5;
+        color: $modal-main-color;
+        font-size: 1.4em;
+    }
+
+    &__close-button {
+    background: transparent;
     border: none;
-}
-.modal-title, .modal-title+button span {
-    color: black;
-}
-#my-modal form label {
-    color: black;
-}
-.modal-footer {
-    border: none;
+    }
+
+    &__span {
+    color: $modal-main-color;
+    }
+
+    &__body {
+        padding: 1em;
+    }
+
+    .contact-form {
+        &__section {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+        }
+    
+        &__label {
+            color: $modal-main-color;
+        }
+
+        &__textarea {
+            min-height: 5em;
+        }
+    
+        &__field-style{
+            height: 2em;
+            padding: 0.35em;
+            border: 1px solid $modal-main-color;
+            border-radius: 0.3em;
+            color: $modal-main-color;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1em;
+        border: none;
+    }
+
+    &__button-submit {
+        padding: 0.6em 0.8em;
+        border-radius: 0.3em;
+        background: $modal-main-color;
+    }
 }
