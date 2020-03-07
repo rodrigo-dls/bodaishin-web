@@ -2,7 +2,7 @@
 // ************************
 //  Font
 // ************************
-$font-primary: 'Archivo', sans-serif;
+$font-primary: Roboto, 'Archivo', sans-serif;
 $font-secondary: 'Open Sans', sans-serif;
 
 // ************************
@@ -22,12 +22,13 @@ $complementary-color: #8247e8;
 // ************************
 // Sizes
 // ************************
-$navbar-min-height: 70px;
+$navbar-min-height: 60px;
 $footer-min-height: 60px;
 
-$section-min-height: calc(100vh - 70px - 71px - 60px);
+$section-min-height: calc(100vh - 60px - 71px - 60px);
 
-$site-content-height: calc(100vh - 70px - 60px);
+$site-content-height: calc(100vh - 60px - 60px);
+
 // ************************
 // Breakpoints
 // ************************

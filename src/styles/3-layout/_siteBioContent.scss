@@ -1,11 +1,13 @@
 /****** Bio ******/
 .bio {
+    display: flex;
+    flex-direction: column;
     background-color: #5E5E5E;
 
     &__content {
         display: flex;
         flex-direction: column;
-        max-width: 700px;
+        max-width: 500px;
         min-height: $site-content-height;
         align-self: center;
         align-items: center;

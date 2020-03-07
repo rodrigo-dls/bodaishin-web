@@ -6,7 +6,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Archivo", sans-serif;
+  font-family: Roboto, "Archivo", sans-serif;
   font-weight: 500;
 }
 
@@ -408,9 +408,10 @@ template {
   top: 0;
   z-index: 7;
   width: 100%;
-  min-height: 70px;
+  min-height: 60px;
   padding: 10px 0;
   background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px 5px, inset rgba(255, 255, 255, 0.3) 0px -3px 4px;
   align-items: center;
 }
 .nav__list {
@@ -425,7 +426,6 @@ template {
 .nav__item {
   display: flex;
   width: 100%;
-  border-right: 1px solid white;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -447,10 +447,10 @@ template {
 
 /****** Home ******/
 .home {
-  height: calc(100vh - 70px - 60px);
-  margin-top: 70px;
+  height: calc(100vh - 60px - 60px);
+  margin-top: 60px;
   background-color: black;
-  padding-top: 70px;
+  padding-top: 8em;
   flex-direction: column;
 }
 .home__content {
@@ -469,13 +469,15 @@ template {
 
 /****** Bio ******/
 .bio {
+  display: flex;
+  flex-direction: column;
   background-color: #5E5E5E;
 }
 .bio__content {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
-  min-height: calc(100vh - 70px - 60px);
+  max-width: 500px;
+  min-height: calc(100vh - 60px - 60px);
   align-self: center;
   align-items: center;
   justify-content: space-evenly;
@@ -498,7 +500,7 @@ template {
   background-color: #4a4a4a;
 }
 .releases__body {
-  min-height: calc(100vh - 70px - 71px - 60px);
+  min-height: calc(100vh - 60px - 71px - 60px);
   padding: 0px 20px;
   justify-content: center;
 }
@@ -542,7 +544,7 @@ template {
   width: 300px;
   margin: 5px auto;
   border-radius: 26px;
-  box-shadow: black 0px 0px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 11px 10px;
   background-color: black;
 }
 /****** Circle Of Life ******/
@@ -552,7 +554,7 @@ template {
 }
 .podcast__body {
   flex-direction: column;
-  min-height: calc(100vh - 70px - 71px - 60px);
+  min-height: calc(100vh - 60px - 71px - 60px);
   align-content: center;
   justify-content: space-evenly;
 }
@@ -608,7 +610,7 @@ template {
   bottom: 0;
   z-index: 8;
   background-color: #151515;
-  /* transition: top 1s; */
+  box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.5);
 }
 .footer__list {
   display: flex;
@@ -619,34 +621,50 @@ template {
   list-style-type: none;
   justify-content: space-evenly;
 }
-.footer__list-item {
-  height: fit-content;
-}
 .footer__link {
-  display: contents;
+  display: flex;
+  width: 35px;
+  height: 35px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: inset 0 3px 0px rgba(255, 255, 255, 0.527), inset 0 -3px 0px rgba(0, 0, 0, 0.18);
+  justify-content: center;
+  align-items: center;
+}
+.footer__link:hover {
+  text-decoration: none;
+  box-shadow: none;
+  transform: translateY(1px);
+}
+.footer__link--instagram:hover {
+  background-color: #c33ca1;
+}
+.footer__link--soundcloud:hover {
+  background-color: #ff6700;
+}
+.footer__link--beatport:hover {
+  background-color: #94d53b;
+}
+.footer__link--facebook:hover {
+  background-color: #2878b5;
 }
 .footer__icon {
-  font-size: 1.5em !important;
-  padding: 0px 0px 12px;
-  transition: all 0.25s;
+  font-size: 1.3em !important;
+  padding: 6px;
 }
 .footer__icon:hover {
-  transform: translateY(-10px);
+  color: #fff;
 }
-
-.fa-instagram:hover {
+.footer__icon--instagram {
   color: #c33ca1;
 }
-
-.fa-soundcloud:hover {
+.footer__icon--soundcloud {
   color: #ff6700;
 }
-
-.fa-headphones:hover {
+.footer__icon--beatport {
   color: #94d53b;
 }
-
-.fa-facebook:hover {
+.footer__icon--facebook {
   color: #2878b5;
 }
 
@@ -893,8 +911,14 @@ footer.transition {
   z-index: 10;
   height: 70px;
   width: 70px;
+  background-color: #f8f9fa;
   border: solid 1px #0f0f0f;
   border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 -5px 10px 10px, rgba(255, 255, 255, 0.25) 0px 3px 5px 1px;
+}
+.FAB:hover {
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
 }
 .FAB i {
   color: #1d1d1d;
