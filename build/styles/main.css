@@ -438,9 +438,9 @@ template {
   padding: 1rem 1rem;
   color: #ffffff;
   line-height: 100%;
+  text-decoration: none;
 }
 .nav__link:hover {
-  text-decoration: none;
   color: white;
   font-weight: bold;
 }
@@ -615,7 +615,8 @@ template {
 .footer__list {
   display: flex;
   height: 60px;
-  width: 70%;
+  width: 40%;
+  min-width: 240px;
   padding: 0;
   align-items: center;
   list-style-type: none;
