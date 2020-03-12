@@ -19,7 +19,9 @@
 
         &--circle-of-life {
             width: 10em;
-            // transform: translateY(-30px);
+            border-radius: 50%;
+            width: 10em;
+            box-shadow: rgba(130, 71, 232, 0.5) 0px 0px 9px 4px
         }
     }
 }
