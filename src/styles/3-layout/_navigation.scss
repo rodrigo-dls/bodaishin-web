@@ -1,50 +1,173 @@
 
-/****** Navbar ******/
-.nav {
-    position: fixed;/* probar con Sticky (anulando el padding-top del Home section)*/
+.header {
+    position: fixed;
     top: 0;
-    z-index: 7;
     width: 100%;
     min-height: $navbar-min-height;
-    padding: 10px 0;
-    background-color: rgb(0, 0, 0);
-    // box-shadow: rgba(0,0,0,0.35) 0 0 15px 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px 5px, inset rgba(255, 255, 255, 0.3) 0px -3px 4px;
-    align-items: center;
+    z-index: 7;
+    background: rgb(153, 81, 183);
+    box-shadow: rgba(0,0,0,0.35) 0 0 5px 5px;
+    // box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px 5px, inset rgba(255, 255, 255, 0.3) 0px -3px 4px;
+    text-align: center;
 
-    &__list {
-        display: flex;
-        height: 1em;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        justify-content: space-around;
+    &__logo {
+        text-transform: uppercase;
+        font-size: 1.5em;
+        opacity: 0; // No necesito el Logo por ahora
+    }
+
+    &__nav-toggle {
+        display: none;
     }
     
-    &__item {
-        display: flex;
-        width: 100%;
-        // border-right: 1px solid white;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    &__nav-toggle:checked ~ .nav {
+        display: block;
+        transform: scale(1,1);
 
-        &:last-child {
-            border-right: 0;
+        a {
+            opacity: 1;
+            transition: opacity 150ms ease-in-out 250ms;
         }
     }
 
-    &__link {
-        width: 100%;
-        padding: 1rem 1rem;
-        color: #ffffff;
-        line-height: 100%;
-        text-decoration: none;
+    &__nav-toggle-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 1em;
 
-        &:hover {
-            color: white;
-            font-weight: bold;
+        span,
+        span::before,
+        span::after {
+            display: block;
+            background: white;
+            height: 2px;
+            width: 2em;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        span::before,
+        span::after {
+            content: '';
+            position: absolute;
+        }
+
+        span::before {
+            top: 7px;
+        }
+        span::after {
+            bottom: 7px;
         }
     }
+
+    /****** Navbar ******/
+    .nav {
+        // z-index: 7;
+    
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding-top: 1em;
+        background: rgb(153, 81, 183);
+        box-shadow: rgba(0,0,0,0.35) 0 5px 5px 5px;
+        text-align: left;
+
+        transform: scale(1,0);
+        transition: transform 400ms ease-in-out;
+        transform-origin: top;
+    
+        &__list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        &__item {
+            margin-bottom: 1em;
+            margin-left: 1em;
+        }
+    
+        &__link {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity 250ms ease-in-out;
+        }
+    }
+}
+
+// Style for desktop size
+@media (min-width: $breakpoint-tablet) {
+    
+    .header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        
+        &__logo {
+            grid-column: 2 / 3;
+        }
+
+        &__nav-toggle-label {
+            display: none;
+        }
+
+        .nav {
+            all: unset;
+            grid-column: 3 / 4;
+            display: flex;
+            justify-content: flex-end;
+            align-content: center;
+    
+            &__list {
+                display: flex;
+                align-self: center;
+            }
+            
+            &__item {
+                margin-left: 3em;
+                margin-bottom: 0;
+            }
+            
+            &__link {
+                position: relative;
+                opacity: 1;
+            }
+    
+            &__link::before,
+            &__link::after {
+                content: ' ';
+                display: block;
+                height: 3px;
+                border-radius: 2px;
+                background: white;
+                position: relative;
+                left: 0;
+                right: 0;
+                transform: scale(0,1);
+                transition: transform ease-in-out 250ms;
+            }
+            
+            &__link::before {
+                top: -.45em;
+            }
+    
+            &__link::after {
+                bottom: -.45em;
+            }
+    
+            &__link:hover::before,
+            &__link:hover::after {
+                transform: scale(1,1);
+            }
+        }
+    }
+    
+
+
 }

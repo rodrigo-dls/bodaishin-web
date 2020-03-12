@@ -7,7 +7,7 @@
     flex-direction: column;
     
     &__content {
-        height: 8em;
+        height: 10em;
         justify-content: center;
         align-items: center;
     }
@@ -18,7 +18,7 @@
         align-self: center;
 
         &--circle-of-life {
-            width: 8em;
+            width: 10em;
             // transform: translateY(-30px);
         }
     }
