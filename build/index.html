@@ -46,7 +46,7 @@
     </header>
     
     <!-- Home -->
-    <div id="home" class="home my-container">
+    <div id="home" class="home">
         <div class="home__content my-row">
             <!--  Intro Animation -->
             <div class="animation__container">
@@ -65,18 +65,18 @@
     </div>
     
     <!-- Bio -->
-    <div id="bio" class="bio my-container">
+    <div id="bio" class="bio">
         <div class  ="bio__content">
             <img src="images/boda-viajando-01.jpg" alt="bio__image" class="bio__image">
-            <h1 class="bio__title">About Him</h1>
+            <h2 class="bio__title">About Him</h2>
             <p class="bio__body">
                 <!-- Born in Buenos Aires, Argentina (1993). Now based in Barcelona. -->
                 Born and raised within the charming but chaothic city of Buenos Aires. Now based in Barcelona to expand his domains.
             </p>
         </div>
-        <div class="bio__content">
+        <div class="bio__content bio__content--inverted">
             <img src="images/boda-pinchando-02.jpg" alt="bio__image" class="bio__image">
-            <h1 class="bio__title">His Music</h1>
+            <h2 class="bio__title">His Music</h2>
             <p class="bio__body">
                 Organic sounds with modern synthesizers, creating an atmosphere full of deep and melodic vibes enveloping you in a unique inner journey.
                 Finding great inspiration from DJs like Hernan Cattaneo, Tiesto, Satori and others, Bodaishin welcomes you to his world of joy and fullness.
@@ -84,7 +84,7 @@
         </div>
         <div class="bio__content">
             <img src="images/background-img-03-color.jpg" alt="bio__image" class="bio__image">
-            <h1 class="bio__title">His Philosophy</h1>
+            <h2 class="bio__title">His Philosophy</h2>
             <p class="bio__body">
                 The name <span style="font-style: italic">Bodaishin</span> comes from the Buddhist philosophical idea that predominates in his thoughts, actions and feelings. It means awakening of spiritual consciousness.
                 <!-- The name <span style="font-style: italic">Bodaishin</span> means <span style="font-weight: bold">awakening of spiritual consciousness.</span> As a faithful believer of spirituality and energies. His mission is to spread his thoughts on people creating music that "awakes" them to mindfulness. Let his music go deep in you. Infusing his compositions with mystic sounds and endless mistical tones.  -->
@@ -94,7 +94,7 @@
    </div>
     
     <!-- Releases -->
-    <div id="releases" class="releases my-container section">
+    <div id="releases" class="releases section">
         <div class="releases__header my-row section__header">
             <h1 class="releases__title section__title">RELEASES</h1>
             <hr class="section__hr">
@@ -140,7 +140,7 @@
     </div>
 
     <!-- Circle Of Life -->
-    <div id="podcast" class="podcast my-container section">
+    <div id="podcast" class="podcast section">
         <div class="podcast__header my-row section__header">
             <h1 class="podcast__title section__title">CIRCLE OF LIFE</h1>
             <hr class="section__hr">
@@ -155,7 +155,7 @@
     </div>
     
     <!-- Labels -->
-    <div id="labels" class="labels my-container section">
+    <div id="labels" class="labels section">
         <div class="labels__header my-row section__header">
             <h1 class="labels__title section__title">LABELS</h1>
             <hr class="section__hr">
@@ -179,38 +179,36 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer my-container">
-        <div class="footer__content my-row">
-            <ul class="footer__list">
-                <li class="footer__list-item">
-                    <a href="https://www.instagram.com/bodaishin_official/" class="footer__link footer__link--instagram" target="_blank" title="Instagram">
-                        <i class="footer__icon footer__icon--instagram fab fa-instagram fa-2x" tabindex="0"></i>
-                    </a>
-                </li>
-                <li class="footer__list-item">
-                    <a href="https://soundcloud.com/bodaishin" class="footer__link footer__link--soundcloud" target="_blank" target="_blank" title="Soundcloud">
-                        <i class="footer__icon footer__icon--soundcloud fab fa-soundcloud fa-2x" tabindex="0"></i>
-                    </a>
-                </li>
-                <li class="footer__list-item">
-                    <a href="https://www.beatport.com/artist/bodaishin/746158" class="footer__link footer__link--beatport" target="_blank" title="Beatport">
-                        <i class="footer__icon footer__icon--beatport fas fa-headphones fa-2x" tabindex="0"></i>
-                    </a>
-                </li>
-                <li class="footer__list-item">
-                    <a href="https://www.facebook.com/Bodaishin-Music-592210694464012/" class="footer__link footer__link--facebook" target="_blank" title="Facebook">
-                        <i class="footer__icon footer__icon--facebook fab fa-facebook fa-2x" tabindex="0"></i> 
-                    </a>
-                </li>
-            </ul>
-            <p></p> <!-- Por si quiero agregar firma en el Footer -->
-        </div>
+    <footer class="footer">
+        <ul class="footer__list">
+            <li class="footer__list-item">
+                <a href="https://www.instagram.com/bodaishin_official/" class="footer__link footer__link--instagram" target="_blank" title="Instagram">
+                    <i class="footer__icon footer__icon--instagram fab fa-instagram fa-2x" tabindex="0"></i>
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a href="https://soundcloud.com/bodaishin" class="footer__link footer__link--soundcloud" target="_blank" target="_blank" title="Soundcloud">
+                    <i class="footer__icon footer__icon--soundcloud fab fa-soundcloud fa-2x" tabindex="0"></i>
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a href="https://www.beatport.com/artist/bodaishin/746158" class="footer__link footer__link--beatport" target="_blank" title="Beatport">
+                    <i class="footer__icon footer__icon--beatport fas fa-headphones fa-2x" tabindex="0"></i>
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a href="https://www.facebook.com/Bodaishin-Music-592210694464012/" class="footer__link footer__link--facebook" target="_blank" title="Facebook">
+                    <i class="footer__icon footer__icon--facebook fab fa-facebook fa-2x" tabindex="0"></i> 
+                </a>
+            </li>
+        </ul>
+        <p></p> <!-- Por si quiero agregar firma en el Footer -->
+        <!-- FAB - Floating Action Button -->
+        <button id="FAB" type="button" class="FAB" data-toggle="modal" data-target="#my-modal" data-whatever="Bodaishin">
+             <i class="far fa-envelope fa-2x"></i>
+         </button>
     </footer>
 
-   <!-- FAB - Floating Action Button -->
-   <button id="FAB" type="button" class="FAB" data-toggle="modal" data-target="#my-modal" data-whatever="Bodaishin">
-        <i class="far fa-envelope fa-2x"></i>
-    </button>
 
     <!-- Modal -->
     <div class="modal-background modal-container" tabindex="-1" role="dialog" aria-hidden="true">

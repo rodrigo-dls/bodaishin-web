@@ -2,11 +2,11 @@
 * {
     box-sizing: border-box;
     margin: 0px;
-    color: $background-color-primary;
+    color: var(--clr-light);
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-primary;
-    font-weight: 500;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-bold);
 }
 ul {
     margin: 0px;
@@ -15,11 +15,7 @@ ul {
 li {
     list-style: none;
 }
-.my-container{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .my-row{
     display: flex;
     flex-wrap: wrap;
@@ -33,17 +29,18 @@ li {
 
     &__title {
         margin: 0px;
-        color: white;
+        color: var(--clr-light);
         font-size: 2rem;
         text-align: center;
         letter-spacing: 8px;
         padding: 0.5em 0px;
+        text-transform: uppercase;
     }
 
     &__hr {
         margin: 0;
         border: 0px;
-        border-top: 1px solid rgb(255, 255, 255);   
+        border-top: 1px solid var(--clr-light);   
     }
 }
 
@@ -52,8 +49,7 @@ html{
     scroll-behavior: smooth;
 }
 body {
-    min-width: 320px;
     margin-top: 20px;
-    font-family: $font-secondary;
-    font-weight: 300;
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-normal);
 }

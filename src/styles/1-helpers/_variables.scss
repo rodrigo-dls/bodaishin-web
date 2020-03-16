@@ -1,3 +1,30 @@
+:root {
+    --clr-primary: hsl(282, 41%, 52%);;
+    --clr-dark: #0C0E36;
+    --clr-light: #FFF;
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fw-black: 900;
+    --ff-primary: Roboto, 'Archivo', sans-serif;
+    --ff-secondary: 'Open Sans', sans-serif;
+
+    // ************************
+    // Sizes
+    // ************************
+    --navbar-min-height: 3.75em;
+    --footer-min-height: 3.75em;
+    --section-min-height: calc(100vh - 3.75em - 4.375em - 3.75em);
+    --site-content-height: calc(100vh - 3.75em - 3.75em);
+
+    // ************************
+    // Breakpoints
+    // ************************
+    --breakpoint-desktop: 1200px;
+    --breakpoint-laptop: 950px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-mobile: 400px;
+}
+
 
 // ************************
 //  Font
@@ -14,7 +41,7 @@ $background-color-primary: white;
 // Blacks
 
 // Modal
-$modal-main-color: #8247e8;
+$modal-main-color: hsl(282, 41%, 52%);;
 
 // Complementaries
 $complementary-color: #8247e8;

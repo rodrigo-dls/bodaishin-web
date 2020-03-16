@@ -1,13 +1,13 @@
 /****** FAB - Floating Action Button ******/
 .FAB {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
+    position: absolute;
+    bottom: 1.5em;
+    right: 1.5em;
     z-index: 10;
-    height: 70px;
-    width: 70px;
-    background-color: #f8f9fa;
-    border: solid 1px #0f0f0f;
+    height: 4.2em;
+    width: 4.2em;
+    background-color: var(--clr-light);
+    border: solid 1px var(--clr-dark);
     border-radius: 50%;
     // box-shadow: rgba(0,0,0,0.35) 0px 10px 30px 30px;
     box-shadow: rgba(0, 0, 0, 0.25) 0 -5px 10px 10px, rgba(255, 255, 255, 0.25) 0px 3px 5px 1px;
@@ -21,8 +21,6 @@
     }
     
     i {
-    color: #1d1d1d;
-    // transform: rotate(45deg);
-    // animation-name: FABiconanimation;
+    color: var(--clr-dark);
     }
 }
