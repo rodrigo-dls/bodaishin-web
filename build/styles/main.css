@@ -1,6 +1,7 @@
 :root {
   --clr-primary: hsl(282, 41%, 52%);
   --clr-dark: #0C0E36;
+  --clr-dark-secondary: #313131;
   --clr-light: #FFF;
   --fw-normal: 400;
   --fw-bold: 700;
@@ -46,22 +47,15 @@ li {
 .section {
   background-color: #000000bd;
 }
-.section__header {
-  flex-direction: column;
-}
 .section__title {
   margin: 0px;
   color: var(--clr-light);
   font-size: 2rem;
   text-align: center;
-  letter-spacing: 8px;
-  padding: 0.5em 0px;
+  letter-spacing: 0.5rem;
+  padding: 1rem 0;
   text-transform: uppercase;
-}
-.section__hr {
-  margin: 0;
-  border: 0px;
-  border-top: 1px solid var(--clr-light);
+  border-bottom: 1px solid var(--clr-light);
 }
 
 /****** Main Container ******/
@@ -562,6 +556,7 @@ template {
   flex-direction: column;
 }
 .home__content {
+  display: flex;
   height: 10em;
   justify-content: center;
   align-items: center;
@@ -636,37 +631,32 @@ template {
 }
 /****** Releases ******/
 .releases {
-  border-top: 1px solid white;
-  background-color: #4a4a4a;
+  border-top: 1px solid var(--clr-light);
+  background: var(--clr-dark-secondary);
 }
-.releases__body {
-  min-height: calc(100vh - 60px - 71px - 60px);
-  padding: 0px 20px;
-  justify-content: center;
+.releases__list {
+  padding: 0px 1.5em;
+  display: flex;
 }
 .releases__item {
-  margin: 15px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "img title" "img info" "media media";
+  max-width: 400px;
 }
-.releases__item-header {
-  display: flex;
-  padding: 0px 20px;
-}
-.releases__item-header-content {
+.releases__item-img {
+  grid-area: img;
   flex-basis: 100%;
-}
-.releases__item-header-content-title {
-  margin-top: 10px;
-  font-size: 1.3rem;
-}
-.releases__item-header-img {
-  margin: 10px;
-  margin-left: 0px !important;
-  border-radius: 3px;
-  flex-basis: 100%;
-  height: 150px;
+  height: 9em;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+}
+.releases__item-title {
+  grid-area: title;
+}
+.releases__item-info {
+  grid-area: info;
 }
 
 .img-container-01 {
@@ -680,17 +670,20 @@ template {
 }
 
 .music-player {
+  grid-area: media;
   display: flex;
-  width: 300px;
-  margin: 5px auto;
+  width: 100%;
   border-radius: 26px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 11px 10px;
-  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 5px;
 }
+.music-player__controls {
+  width: 100%;
+}
+
 /****** Circle Of Life ******/
 .podcast {
   border-top: 1px solid white;
-  background-color: #353535;
+  background: var(--clr-dark-secondary);
 }
 .podcast__body {
   flex-direction: column;
@@ -701,6 +694,9 @@ template {
 .podcast__body-title {
   font-size: 1.3rem;
 }
+.podcast__player-container {
+  max-width: 20em;
+}
 
 /****** Labels ******/
 .labels {
@@ -709,7 +705,7 @@ template {
   padding-bottom: 40px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  background-color: #2b2b2b;
+  background: var(--clr-dark-secondary);
 }
 .labels__body {
   padding: 0px 2em;

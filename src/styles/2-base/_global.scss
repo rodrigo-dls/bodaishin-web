@@ -23,24 +23,15 @@ li {
 .section {
     background-color: #000000bd;
 
-    &__header {
-        flex-direction: column;
-    }
-
     &__title {
         margin: 0px;
         color: var(--clr-light);
         font-size: 2rem;
         text-align: center;
-        letter-spacing: 8px;
-        padding: 0.5em 0px;
+        letter-spacing: 0.5rem;
+        padding: 1rem 0;
         text-transform: uppercase;
-    }
-
-    &__hr {
-        margin: 0;
-        border: 0px;
-        border-top: 1px solid var(--clr-light);   
+        border-bottom: 1px solid var(--clr-light);
     }
 }
 

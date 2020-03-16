@@ -1,41 +1,40 @@
 /****** Releases ******/
 .releases {
-    border-top: 1px solid white;
-    background-color: #4a4a4a;
+    border-top: 1px solid var(--clr-light);
+    background: var(--clr-dark-secondary);
     
-    &__body {
-        min-height: $section-min-height;
-        padding: 0px 20px;
-        justify-content: center;
+    &__list {
+        padding: 0px 1.5em;
+
+        display: flex; //provisorio
     }
 
     &__item {
-        margin: 15px 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "img title"
+            "img info"
+            "media media";
+
+        max-width: 400px; //provisorio
     }
 
-    &__item-header {
-        display: flex;
-        padding: 0px 20px;
-    }
-
-    &__item-header-content {
+    &__item-img {
+        grid-area: img;
         flex-basis: 100%;
-    }
-
-    &__item-header-content-title {
-        margin-top: 10px;
-        font-size: 1.3rem;
-    }
-
-    &__item-header-img {
-        margin: 10px;
-        margin-left: 0px !important;
-        border-radius: 3px;
-        flex-basis: 100%;
-        height: 150px;
+        height: 9em;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+    }
+
+    &__item-title {
+        grid-area: title;
+    }
+
+    &__item-info {
+        grid-area: info;
     }
 }
 
@@ -49,22 +48,21 @@
 }
 
 .music-player {
+    grid-area: media;
     display: flex;
-    width: 300px;
-    margin: 5px auto;
+    width: 100%;
     border-radius: 26px;
-    box-shadow: rgba(0,0,0,.25) 0 11px 10px;
-    background-color: black;
+    box-shadow: rgba(0,0,0,.5) 0 5px 5px;
 
     &__controls {
-        // width: 100%;
+        width: 100%;
     }
 }
 
 /****** Circle Of Life ******/
 .podcast {
     border-top: 1px solid white;
-    background-color: #353535;
+    background: var(--clr-dark-secondary);
 
     &__body {
         flex-direction: column;
@@ -76,6 +74,10 @@
     &__body-title {
         font-size: 1.3rem;
     }
+
+    &__player-container {
+        max-width: 20em;
+    }
 }
 
 /****** Labels ******/
@@ -84,7 +86,7 @@
     padding-bottom: 40px;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
-    background-color: #2b2b2b;
+    background: var(--clr-dark-secondary);
 
     &__body {
         padding: 0px 2em;
