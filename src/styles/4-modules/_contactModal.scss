@@ -34,13 +34,13 @@
         display: flex;
         justify-content: space-between;
         padding: 1em;
-        border-bottom: 1px solid $modal-main-color;
+        border-bottom: 1px solid var(--clr-primary);
     }
 
     &__tittle {
         margin: 0;
         line-height: 1.5;
-        color: $modal-main-color;
+        color: var(--clr-primary);
         font-size: 1.4em;
     }
 
@@ -50,7 +50,7 @@
     }
 
     &__span {
-    color: $modal-main-color;
+    color: var(--clr-primary);
     }
 
     &__body {
@@ -65,7 +65,7 @@
         }
     
         &__label {
-            color: $modal-main-color;
+            color: var(--clr-primary);
         }
 
         &__textarea {
@@ -75,9 +75,9 @@
         &__field-style{
             height: 2em;
             padding: 0.35em;
-            border: 1px solid $modal-main-color;
+            border: 1px solid var(--clr-primary);
             border-radius: 0.3em;
-            color: $modal-main-color;
+            color: var(--clr-primary);
         }
     }
 
@@ -91,6 +91,6 @@
     &__button-submit {
         padding: 0.6em 0.8em;
         border-radius: 0.3em;
-        background: $modal-main-color;
+        background: var(--clr-primary);
     }
 }

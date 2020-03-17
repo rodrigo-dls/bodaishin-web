@@ -4,16 +4,33 @@
     margin: 0px;
     color: var(--clr-light);
 }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--ff-primary);
     font-weight: var(--fw-bold);
 }
+
 ul {
     margin: 0px;
     padding: 0px;
 }
+
 li {
     list-style: none;
+}
+
+.btn {
+    border-radius: 50%;
+
+    &--small {
+        height: var(--btn-small);
+        width: var(--btn-small);
+    }
+
+    &--medium {
+        height: var(--btn-medium);
+        width: var(--btn-medium);
+    }
 }
 
 .my-row{

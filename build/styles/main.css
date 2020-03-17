@@ -1,5 +1,6 @@
 :root {
   --clr-primary: hsl(282, 41%, 52%);
+  --clr-secondary: hsl(262, 78%, 59%);
   --clr-dark: #0C0E36;
   --clr-dark-secondary: #313131;
   --clr-light: #FFF;
@@ -11,11 +12,9 @@
   --navbar-min-height: 3.75em;
   --footer-min-height: 3.75em;
   --section-min-height: calc(100vh - 3.75em - 4.375em - 3.75em);
-  --site-content-height: calc(100vh - 3.75em - 3.75em);
-  --breakpoint-desktop: 1200px;
-  --breakpoint-laptop: 950px;
-  --breakpoint-tablet: 768px;
-  --breakpoint-mobile: 400px;
+  --site-content-height: calc(100vh - var(--footer-min-height) - var(--navbar-min-height));
+  --btn-small: 2.5em;
+  --btn-medium: 4.2em;
 }
 
 /****** General Custom ******/
@@ -37,6 +36,18 @@ ul {
 
 li {
   list-style: none;
+}
+
+.btn {
+  border-radius: 50%;
+}
+.btn--small {
+  height: var(--btn-small);
+  width: var(--btn-small);
+}
+.btn--medium {
+  height: var(--btn-medium);
+  width: var(--btn-medium);
 }
 
 .my-row {
@@ -549,11 +560,15 @@ template {
 }
 /****** Home ******/
 .home {
-  height: calc(100vh - 60px - 60px);
-  margin-top: 60px;
+  height: var(--site-content-height);
+  margin-top: var(--navbar-min-height);
   background-color: black;
-  padding-top: 8em;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: min-content;
+  grid-template-rows: 17em min-content;
+  grid-row-gap: 2em;
+  justify-content: center;
+  justify-items: center;
 }
 .home__content {
   display: flex;
@@ -561,15 +576,15 @@ template {
   justify-content: center;
   align-items: center;
 }
-.home__image {
-  position: absolute;
-  width: 50%;
-  align-self: center;
+.home__content:nth-child(1) {
+  align-self: end;
+}
+.home__content:nth-child(2) {
+  align-self: baseline;
 }
 .home__image--circle-of-life {
-  width: 10em;
+  width: 9em;
   border-radius: 50%;
-  width: 10em;
   box-shadow: rgba(130, 71, 232, 0.5) 0px 0px 9px 4px;
 }
 
@@ -687,7 +702,7 @@ template {
 }
 .podcast__body {
   flex-direction: column;
-  min-height: calc(100vh - 60px - 71px - 60px);
+  min-height: var(--section-min-height);
   align-content: center;
   justify-content: space-evenly;
 }
@@ -700,7 +715,7 @@ template {
 
 /****** Labels ******/
 .labels {
-  margin-bottom: 60px;
+  margin-bottom: var(--footer-min-height);
   /* to float over the bottom bar */
   padding-bottom: 40px;
   border-top: 1px solid white;
@@ -746,6 +761,7 @@ template {
   bottom: 0;
   z-index: 8;
   width: 100%;
+  min-height: var(--footer-min-height);
   background-color: #151515;
   box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -762,10 +778,7 @@ template {
 }
 .footer__link {
   display: flex;
-  width: 2.75em;
-  height: 2.75em;
   background: var(--clr-light);
-  border-radius: 50%;
   box-shadow: inset 0 3px 0px rgba(255, 255, 255, 0.527), inset 0 -3px 0px rgba(0, 0, 0, 0.18);
   justify-content: center;
   align-items: center;
@@ -842,12 +855,12 @@ template {
   display: flex;
   justify-content: space-between;
   padding: 1em;
-  border-bottom: 1px solid #9952b7;
+  border-bottom: 1px solid var(--clr-primary);
 }
 .modal__tittle {
   margin: 0;
   line-height: 1.5;
-  color: #9952b7;
+  color: var(--clr-primary);
   font-size: 1.4em;
 }
 .modal__close-button {
@@ -855,7 +868,7 @@ template {
   border: none;
 }
 .modal__span {
-  color: #9952b7;
+  color: var(--clr-primary);
 }
 .modal__body {
   padding: 1em;
@@ -866,7 +879,7 @@ template {
   margin-bottom: 1em;
 }
 .modal .contact-form__label {
-  color: #9952b7;
+  color: var(--clr-primary);
 }
 .modal .contact-form__textarea {
   min-height: 5em;
@@ -874,9 +887,9 @@ template {
 .modal .contact-form__field-style {
   height: 2em;
   padding: 0.35em;
-  border: 1px solid #9952b7;
+  border: 1px solid var(--clr-primary);
   border-radius: 0.3em;
-  color: #9952b7;
+  color: var(--clr-primary);
 }
 .modal__footer {
   display: flex;
@@ -887,7 +900,7 @@ template {
 .modal__button-submit {
   padding: 0.6em 0.8em;
   border-radius: 0.3em;
-  background: #9952b7;
+  background: var(--clr-primary);
 }
 
 /* Scroll Button */
@@ -1048,12 +1061,10 @@ footer.transition {
   bottom: 1.5em;
   right: 1.5em;
   z-index: 10;
-  height: 4.2em;
-  width: 4.2em;
   background-color: var(--clr-light);
   border: solid 1px var(--clr-dark);
-  border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.25) 0 -5px 10px 10px, rgba(255, 255, 255, 0.25) 0px 3px 5px 1px;
+  cursor: pointer;
 }
 .FAB:hover {
   background-color: #e2e6ea;
@@ -1125,7 +1136,6 @@ footer.transition {
   z-index: 1;
   overflow: hidden;
   background-color: transparent;
-  top: auto;
 }
 
 .animation__centro {
