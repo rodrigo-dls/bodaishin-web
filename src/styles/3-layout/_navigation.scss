@@ -4,9 +4,36 @@
     width: 100vw;
     min-height: var(--navbar-min-height);
     z-index: 7;
-    background: var(--clr-primary);
     box-shadow: rgba(0,0,0,0.35) 0 0 5px 5px;
     text-align: center;
+    background: var(--clr-primary);
+
+    // Background gradient test
+
+    // background: linear-gradient(to right,
+    //     var(--clr-primary) 0%,
+    //     var(--clr-primary) 5em,     #ffadec 8em,
+    //     var(--clr-primary) 11em,    #ffadec 14em, 
+    //     var(--clr-primary) 17em,    #ffadec 20em,
+    //     var(--clr-primary) 23em, 
+    //     var(--clr-primary) 100%);
+
+    background: linear-gradient(to left,
+        black 0%,
+        black 40em,    var(--clr-complimentary) 40.5em,
+        black 41em,    var(--clr-complimentary) 41.5em, 
+        black 42em,    var(--clr-complimentary) 42.5em,
+        black 43em, 
+        black 100%);
+
+    // background: linear-gradient(to right,
+    //     var(--clr-primary) 0%, 
+    //     var(--clr-primary) 36%,    var(--clr-complimentary) 37%,
+    //     var(--clr-primary) 38%,    var(--clr-complimentary) 39%, 
+    //     var(--clr-primary) 40%,     var(--clr-complimentary) 41%,
+    //     var(--clr-primary) 42%, 
+    //     var(--clr-primary) 100%);
+
 
     &__logo {
         text-transform: uppercase;
@@ -89,18 +116,20 @@
             margin-bottom: 1em;
             margin-left: 1em;
         }
-    
+        
         &__link {
             color: var(--clr-light);
             text-decoration: none;
             text-transform: uppercase;
             opacity: 0;
             transition: opacity 250ms ease-in-out;
+            font-weight: var(--fw-bold);
+            letter-spacing: 2px;
         }
     }
 }
 
-// Style for desktop size
+// Style for Desktop size
 @media (min-width: $breakpoint-tablet) {
     
     .header {
@@ -128,7 +157,7 @@
             }
             
             &__item {
-                margin-left: 3em;
+                margin-left: 2em;
                 margin-bottom: 0;
             }
             
@@ -165,7 +194,4 @@
             }
         }
     }
-    
-
-
 }

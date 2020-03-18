@@ -1,6 +1,7 @@
 :root {
-    --clr-primary: hsl(282, 41%, 52%);
+    --clr-primary: #9952b7;
     --clr-secondary: hsl(262, 78%, 59%);
+    --clr-complimentary: #d0eaea;
     --clr-dark: #0C0E36;
     --clr-dark-secondary: #313131;
     --clr-light: #FFF;
@@ -21,4 +22,12 @@
         // Buttons Sizes
         --btn-small: 2.5em;
         --btn-medium: 4.2em;
+    // ************************
+    // Animations
+    // ************************
+
+        // Color Animation
+        --hue-rotate-init: hue-rotate(-10deg);
+        --hue-rotate-end: hue-rotate(240deg);
+        --hue-rotate-animation: hue-rotate 10s ease alternate infinite;
 }

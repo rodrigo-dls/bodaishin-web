@@ -3,6 +3,10 @@
     border-top: 1px solid var(--clr-light);
     background: var(--clr-dark-secondary);
     
+    &__title {
+        @extend %section-title;
+    }
+
     &__list {
         padding: 0px 1.5em;
 
@@ -64,6 +68,10 @@
     border-top: 1px solid white;
     background: var(--clr-dark-secondary);
 
+    &__title {
+        @extend %section-title;
+    }
+
     &__body {
         flex-direction: column;
         min-height: var(--section-min-height);
@@ -88,22 +96,33 @@
     border-bottom: 1px solid white;
     background: var(--clr-dark-secondary);
 
+    &__title {
+        @extend %section-title;
+    }
+    
     &__body {
-        padding: 0px 2em;
     }
 
     &__list {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        width: 100%;
+        padding: 0 1.5em;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__image {
-        height: 100px;
-        width: 100px;
-        margin: 15px 0px;
-        border-radius: 5%;
-        box-shadow: black 0px 0px 5px 0px;
+        height: 6.5em;
+        width: 100%;
+        max-width: 20em;
+        margin: 1em 0;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 5px;
         background-repeat: no-repeat;
         background-size: cover;
         background-color: #ffffff;
@@ -115,15 +134,17 @@
 
         &--avenue {
             background-image: url("../../../build/images/logo-3rd-avenue-02.jpg");
+            background-size: 70%;
         }
 
         &--purr {
             background-image: url("../../../build/images/logo-the-purr-01.png");
+            background-size: 70%;
         }
 
         &--flug-lab {
             background-image: url("../../../build/images/logo-flug-lab-01.png");
-            background-size: contain !important;
+            background-size: 32%;
         }
     }
 }

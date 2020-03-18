@@ -1,6 +1,7 @@
 :root {
-  --clr-primary: hsl(282, 41%, 52%);
+  --clr-primary: #9952b7;
   --clr-secondary: hsl(262, 78%, 59%);
+  --clr-complimentary: #d0eaea;
   --clr-dark: #0C0E36;
   --clr-dark-secondary: #313131;
   --clr-light: #FFF;
@@ -15,6 +16,9 @@
   --site-content-height: calc(100vh - var(--footer-min-height) - var(--navbar-min-height));
   --btn-small: 2.5em;
   --btn-medium: 4.2em;
+  --hue-rotate-init: hue-rotate(-10deg);
+  --hue-rotate-end: hue-rotate(240deg);
+  --hue-rotate-animation: hue-rotate 10s ease alternate infinite;
 }
 
 /****** General Custom ******/
@@ -50,15 +54,7 @@ li {
   width: var(--btn-medium);
 }
 
-.my-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.section {
-  background-color: #000000bd;
-}
-.section__title {
+.labels__title, .podcast__title, .releases__title {
   margin: 0px;
   color: var(--clr-light);
   font-size: 2rem;
@@ -75,7 +71,6 @@ html {
 }
 
 body {
-  margin-top: 20px;
   font-family: var(--ff-secondary);
   font-weight: var(--fw-normal);
 }
@@ -425,9 +420,10 @@ template {
   width: 100vw;
   min-height: var(--navbar-min-height);
   z-index: 7;
-  background: var(--clr-primary);
   box-shadow: rgba(0, 0, 0, 0.35) 0 0 5px 5px;
   text-align: center;
+  background: var(--clr-primary);
+  background: linear-gradient(to left, black 0%, black 40em, var(--clr-complimentary) 40.5em, black 41em, var(--clr-complimentary) 41.5em, black 42em, var(--clr-complimentary) 42.5em, black 43em, black 100%);
   /****** Navbar ******/
 }
 .header__logo {
@@ -504,6 +500,8 @@ template {
   text-transform: uppercase;
   opacity: 0;
   transition: opacity 250ms ease-in-out;
+  font-weight: var(--fw-bold);
+  letter-spacing: 2px;
 }
 
 @media (min-width: 768px) {
@@ -529,7 +527,7 @@ template {
     align-self: center;
   }
   .header .nav__item {
-    margin-left: 3em;
+    margin-left: 2em;
     margin-bottom: 0;
   }
   .header .nav__link {
@@ -585,7 +583,7 @@ template {
 .home__image--circle-of-life {
   width: 9em;
   border-radius: 50%;
-  box-shadow: rgba(130, 71, 232, 0.5) 0px 0px 9px 4px;
+  box-shadow: rgba(185, 243, 230, 0.5) 0px 0px 9px 4px;
 }
 
 /****** Bio ******/
@@ -722,20 +720,24 @@ template {
   border-bottom: 1px solid white;
   background: var(--clr-dark-secondary);
 }
-.labels__body {
-  padding: 0px 2em;
-}
 .labels__list {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  padding: 0 1.5em;
+}
+.labels__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .labels__image {
-  height: 100px;
-  width: 100px;
-  margin: 15px 0px;
-  border-radius: 5%;
-  box-shadow: black 0px 0px 5px 0px;
+  height: 6.5em;
+  width: 100%;
+  max-width: 20em;
+  margin: 1em 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 5px;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #ffffff;
@@ -746,13 +748,15 @@ template {
 }
 .labels__image--avenue {
   background-image: url("../../../build/images/logo-3rd-avenue-02.jpg");
+  background-size: 70%;
 }
 .labels__image--purr {
   background-image: url("../../../build/images/logo-the-purr-01.png");
+  background-size: 70%;
 }
 .labels__image--flug-lab {
   background-image: url("../../../build/images/logo-flug-lab-01.png");
-  background-size: contain !important;
+  background-size: 32%;
 }
 
 /****** Footer ******/
@@ -904,37 +908,6 @@ template {
 }
 
 /* Scroll Button */
-@-webkit-keyframes sdb03 {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  60% {
-    box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.1);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes sdb03 {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  60% {
-    box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.1);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-/* FAB - Animation */
 @keyframes FABanimation {
   0% {
     transform: rotate(-45deg);
@@ -954,7 +927,6 @@ template {
     border-radius: 9%;
   }
 }
-/* FAB icon animation */
 @keyframes FABiconanimation {
   0% {
     transform: rotate(45deg);
@@ -975,6 +947,24 @@ template {
 
 .animation-settings:hover {
   animation-play-state: paused;
+}
+
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: 0deg;
+    -moz-filter: 0deg;
+    -ms-filter: 0deg;
+    filter: 0deg;
+  }
+  to {
+    -webkit-filter: 30deg;
+    -moz-filter: 30deg;
+    -ms-filter: 30deg;
+    filter: 30deg;
+  }
+}
+.hue-rotate-animation {
+  animation: var(--hue-rotate-animation);
 }
 
 /* PRUEBAS */
