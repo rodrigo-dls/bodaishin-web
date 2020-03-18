@@ -4,6 +4,8 @@
   --clr-complimentary: #d0eaea;
   --clr-dark: #0C0E36;
   --clr-dark-secondary: #313131;
+  --clr-dark-secondary-light: #313131e6;
+  --clr-dark-secondary-lighter: #313131cc;
   --clr-light: #FFF;
   --fw-normal: 400;
   --fw-bold: 700;
@@ -648,14 +650,18 @@ template {
   background: var(--clr-dark-secondary);
 }
 .releases__list {
-  padding: 0px 1.5em;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1.5em;
 }
 .releases__item {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas: "img title" "img info" "media media";
-  max-width: 400px;
+  margin: 0.5em;
+  max-width: 25em;
 }
 .releases__item-img {
   grid-area: img;
@@ -664,28 +670,32 @@ template {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  background-color: transparent;
 }
 .releases__item-title {
   grid-area: title;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
 }
 .releases__item-info {
   grid-area: info;
+  margin-left: 0.5em;
 }
 
 .img-container-01 {
   background-image: url("../../../build/images/release-cover-downtempo-grooves.jpeg");
-  /* background-color: #424242; */
 }
 
 .img-container-02 {
   background-image: url("../../../build/images/release-cover-three-of-a-kind.jpeg");
-  /* background-color: #424242; */
 }
 
 .music-player {
   grid-area: media;
   display: flex;
-  width: 100%;
+  width: 90%;
+  justify-self: center;
+  margin-top: 1em;
   border-radius: 26px;
   box-shadow: rgba(0, 0, 0, 0.5) 0 5px 5px;
 }
@@ -695,17 +705,14 @@ template {
 
 /****** Circle Of Life ******/
 .podcast {
-  border-top: 1px solid white;
-  background: var(--clr-dark-secondary);
+  border-top: 1px solid var(--clr-light);
+  background: var(--clr-dark-secondary-light);
 }
 .podcast__body {
-  flex-direction: column;
-  min-height: var(--section-min-height);
+  display: flex;
   align-content: center;
   justify-content: space-evenly;
-}
-.podcast__body-title {
-  font-size: 1.3rem;
+  padding: 1.5em;
 }
 .podcast__player-container {
   max-width: 20em;
@@ -715,21 +722,25 @@ template {
 .labels {
   margin-bottom: var(--footer-min-height);
   /* to float over the bottom bar */
-  padding-bottom: 40px;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  background: var(--clr-dark-secondary);
+  padding-bottom: 2.5em;
+  border-top: 1px solid var(--clr-light);
+  border-bottom: 1px solid var(--clr-light);
+  background: var(--clr-dark-secondary-lighter);
+}
+.labels__body {
+  padding: 1.5em;
+  padding-bottom: 0;
 }
 .labels__list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 1.5em;
 }
 .labels__item {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-basis: 30%;
 }
 .labels__image {
   height: 6.5em;
@@ -744,7 +755,7 @@ template {
   background-position: center center;
 }
 .labels__image:hover {
-  opacity: 0.8;
+  filter: invert(1);
 }
 .labels__image--avenue {
   background-image: url("../../../build/images/logo-3rd-avenue-02.jpg");
@@ -759,6 +770,11 @@ template {
   background-size: 32%;
 }
 
+@media (min-width: 768px) {
+  .labels__list {
+    flex-direction: unset;
+  }
+}
 /****** Footer ******/
 .footer {
   position: fixed;
@@ -1181,33 +1197,6 @@ footer.transition {
   animation-duration: 2s;
 }
 
-/****** Media Queries ******/
-@media (min-width: 950px) {
-  #releases {
-    width: 50%;
-    float: left;
-  }
-
-  #releases .section-body {
-    min-height: 620px;
-  }
-
-  #releases .section-body ul {
-    display: contents;
-  }
-
-  #podcast {
-    width: 50%;
-    float: left;
-    min-height: 500px;
-  }
-
-  #labels {
-    max-width: 50%;
-    float: left;
-    padding-bottom: 0px;
-  }
-}
 /* Order of properties
     1. Display
     2. Position

@@ -8,20 +8,22 @@
     }
 
     &__list {
-        padding: 0px 1.5em;
-
-        display: flex; //provisorio
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 1.5em;
     }
 
     &__item {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
         grid-template-areas:
             "img title"
             "img info"
             "media media";
-
-        max-width: 400px; //provisorio
+        margin: 0.5em;
+        max-width: 25em;
     }
 
     &__item-img {
@@ -31,30 +33,34 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+        background-color: transparent;
     }
 
     &__item-title {
         grid-area: title;
+        margin-bottom: 0.5em;
+        margin-left: 0.5em;        
     }
 
     &__item-info {
         grid-area: info;
+        margin-left: 0.5em;
     }
 }
 
 .img-container-01 {
     background-image: url("../../../build/images/release-cover-downtempo-grooves.jpeg");
-    /* background-color: #424242; */
 }
 .img-container-02 {
     background-image: url("../../../build/images/release-cover-three-of-a-kind.jpeg");
-    /* background-color: #424242; */
 }
 
 .music-player {
     grid-area: media;
     display: flex;
-    width: 100%;
+    width: 90%;
+    justify-self: center;
+    margin-top: 1em;
     border-radius: 26px;
     box-shadow: rgba(0,0,0,.5) 0 5px 5px;
 
@@ -65,22 +71,20 @@
 
 /****** Circle Of Life ******/
 .podcast {
-    border-top: 1px solid white;
-    background: var(--clr-dark-secondary);
+    border-top: 1px solid var(--clr-light);
+    background: var(--clr-dark-secondary-light);
 
     &__title {
         @extend %section-title;
     }
 
     &__body {
-        flex-direction: column;
-        min-height: var(--section-min-height);
+        display: flex;
+        // flex-direction: column;
         align-content: center;
         justify-content: space-evenly;
-    }
-
-    &__body-title {
-        font-size: 1.3rem;
+        // min-height: var(--section-min-height);
+        padding: 1.5em;;
     }
 
     &__player-container {
@@ -91,29 +95,31 @@
 /****** Labels ******/
 .labels {
     margin-bottom: var(--footer-min-height); /* to float over the bottom bar */
-    padding-bottom: 40px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    background: var(--clr-dark-secondary);
+    padding-bottom: 2.5em; // to not overlay on FAB
+    border-top: 1px solid var(--clr-light);
+    border-bottom: 1px solid var(--clr-light);
+    background: var(--clr-dark-secondary-lighter);
 
     &__title {
         @extend %section-title;
     }
-    
+
     &__body {
+        padding: 1.5em;
+        padding-bottom: 0;
     }
 
     &__list {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0 1.5em;
     }
 
     &__item {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        flex-basis: 30%;
     }
 
     &__image {
@@ -129,7 +135,8 @@
         background-position: center center;
 
         &:hover {
-            opacity: 0.8;
+            // opacity: 0.8;
+            filter: invert(1);
         }
 
         &--avenue {
@@ -145,6 +152,14 @@
         &--flug-lab {
             background-image: url("../../../build/images/logo-flug-lab-01.png");
             background-size: 32%;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .labels {
+        &__list {
+            flex-direction: unset;
         }
     }
 }
